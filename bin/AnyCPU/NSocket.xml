@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NSocket</name>
+    </assembly>
+    <members>
+        <member name="M:NSocket.ServeHelper.UnInit(System.String)">
+            <summary>
+            反初始化
+            </summary>
+            <param name="ipPort">服务器端IP</param>
+        </member>
+        <member name="F:NSocket.Serve.m_ServicePort">
+            <summary>
+            监听的端口  
+            </summary>
+        </member>
+        <member name="F:NSocket.Serve.m_maxCnt">
+            <summary>
+            最大连接个数
+            </summary>
+        </member>
+        <member name="F:NSocket.Serve.m_clients">
+            <summary>
+            客户端列表集合, string是客户端地址和端口
+            </summary>
+        </member>
+        <member name="F:NSocket.Serve.m_ListenSocket">
+            <summary>
+            服务器Socket
+            </summary>
+        </member>
+        <member name="P:NSocket.Serve.Clients">
+            <summary>
+            所有连接上的客户端
+            </summary>
+        </member>
+        <member name="M:NSocket.Serve.InitSocket(System.String,System.Int32)">
+            <summary>  
+            初始化服务器对象  
+            </summary>  
+            <param name="ipAddress">ip地址</param>
+            <param name="port">端口</param>  
+        </member>
+        <member name="M:NSocket.Serve.Send(System.String,System.Object)">
+            <summary>
+            发送数据
+            </summary>
+            <param name="ipPort">要发送的Socket</param>
+            <param name="SendBuf">发送数据</param>
+            <returns>发送成功字节数,失败返回-1</returns>
+        </member>
+        <member name="M:NSocket.Serve.ReConnect(System.String)">
+            <summary>
+            强制重连
+            </summary>
+            <param name="ipPort">客户端IP</param>
+        </member>
+        <member name="M:NSocket.Serve.Recieve(System.String,System.Byte[])">
+            <summary>
+            接收数据
+            </summary>
+            <param name="ipPort">接收数据Socket</param>
+            <param name="RcvBuf">返回的接收数据</param>
+            <returns>返回接收数据字节数，失败返回-1</returns>
+        </member>
+        <member name="M:NSocket.Serve.IsClientConnect(System.String,System.Int32)">
+            <summary>
+            判断是否连上客户端
+            </summary>
+            <param name="ip">要连接的客户端IP</param>
+            <param name="port">要连接的客户端端口</param>
+            <returns></returns>
+        </member>
+        <member name="M:NSocket.Serve.SClient.Recieve(System.Byte[])">
+            <summary>
+            接收数据
+            </summary>
+            <param name="RecvBuf">返回的接收数据</param>
+            <returns>返回接收数据字节数，失败返回-1</returns>
+        </member>
+        <member name="F:NSocket.EMSOCKET_STATUS.SOCKET_NO_INIT">
+            <summary>
+            //未初始化
+            </summary>
+        </member>
+        <member name="F:NSocket.EMSOCKET_STATUS.SOCKET_DISCONNECTED">
+            <summary>
+            //已断开
+            </summary>
+        </member>
+        <member name="F:NSocket.EMSOCKET_STATUS.SOCKET_NORMAL">
+            <summary>
+            //已连接
+            </summary>
+        </member>
+        <member name="T:NSocket.EMObjectStatus">
+            <summary>
+            对象连接状态
+            </summary>
+        </member>
+        <member name="F:NSocket.EMObjectStatus.OBJECT_NO_INIT">
+            <summary>
+            //未初始化
+            </summary>
+        </member>
+        <member name="F:NSocket.EMObjectStatus.OBJECT_DISCONNECTED">
+            <summary>
+            //已断开
+            </summary>
+        </member>
+        <member name="F:NSocket.EMObjectStatus.OBJECT_NORMAL">
+            <summary>
+            //已连接
+            </summary>
+        </member>
+        <member name="T:NSocket.EMSOCKET_TYPE">
+            <summary>
+            网络类型
+            </summary>
+        </member>
+        <member name="F:NSocket.EMSOCKET_TYPE.SOCKET_CLIENT">
+             <summary>
+            客户端
+             </summary>
+        </member>
+        <member name="F:NSocket.EMSOCKET_TYPE.SOCKET_SERVER">
+             <summary>
+            服务器
+             </summary>
+        </member>
+        <member name="T:NSocket.SocketInfo">
+            <summary>
+            通信对象信息
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.SocketIndex">
+            <summary>
+            对象索引
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.SocketName">
+            <summary>
+            对象名字
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.Type">
+            <summary>
+            对象类型 EMSOCKET_TYPE SOCKET_CLIENT = 0,
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.ServiceIp">
+            <summary>
+            服务器端 IP
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.ServicePort">
+            <summary>
+            服务器端 端口
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.ClientIp">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.ClientPort">
+            <summary>
+            客户端端口
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.ShowIndex">
+            <summary>
+            界面显示序号, 如果不在界面显示, 则默认为0
+            </summary>
+        </member>
+        <member name="F:NSocket.SocketInfo.IsSave">
+            <summary>
+            保存到文件
+            </summary>
+        </member>
+        <member name="M:NSocket.SocketInfo.#ctor">
+            <summary>
+            创建 SocketInfo 实例
+            </summary>
+        </member>
+        <member name="M:NSocket.SocketInfo.#ctor(System.Int32)">
+            <summary>
+            创建 SocketInfo 实例
+            </summary>
+            <param name="index">显示索引</param>
+        </member>
+        <member name="T:NSocket.SktObject">
+            <summary>
+            套接字通信对象
+            </summary>
+        </member>
+        <member name="P:NSocket.SktObject.Status">
+            <summary>
+            当前连接状态, 参考EMObjectStatus
+            </summary>
+        </member>
+        <member name="M:NSocket.SktObject.Init(NSocket.SocketInfo)">
+            <summary>
+            初始化通信对象模块
+            </summary>
+            <param name="sktInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSocket.SktObject.Send(System.Object,System.Int32,System.Int32)">
+            <summary>
+            发送数据
+            </summary>
+            <param name="pBuffer">发送缓存区, 支持两种类型: string byte[]</param>
+            <param name="offset"></param>
+            <param name="nSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSocket.SktObject.Recv(System.Byte[],System.Int32)">
+            <summary>
+            接收TCP数据
+            </summary>
+            <param name="pBuffer">接收缓存区</param>
+            <param name="nSize">接收数据的大概大小</param>
+            <returns>成功返回接收数据个数, 失败返回负数, 没有数据返回0</returns>
+        </member>
+        <member name="M:NSocket.SktObject.Uninit">
+            <summary>
+            反初始化
+            </summary>
+        </member>
+        <member name="M:NSocket.SktObject.InitServer">
+            <summary>
+            初始化服务器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NSocket.SktObject.RunConnectAsThread">
+            <summary>
+            创建一个线程进行自动连接所有对象
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,992 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NPlcMap</name>
+    </assembly>
+    <members>
+        <member name="T:NPlcMap.PLCMapCtrl">
+            <summary>
+            plc操作类型
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCMapCtrl.重新初始化">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCMapCtrl.启动映射">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCMapCtrl.停止映射">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.MapDataType">
+            <summary>
+            映射数据类型
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.String">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.Boolean">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.Byte">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.UShort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.Short">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.UInt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.Int">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.Float">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapDataType.Double">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.PLCType">
+            <summary>
+            plc类型
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCType.三菱">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCType.欧姆龙">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCType.汇川">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCType.西门子">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.SyncDir">
+            <summary>
+            PLC同步方式
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SyncDir.本地同步到PLC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SyncDir.PLC同步到本地">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.PLCState">
+            <summary>
+            plc状态
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCState.UnInit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCState.Init">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCState.Mapping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLCState.Error">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.SingleVarMapStatus">
+            <summary>
+            单个变量映射状态
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SingleVarMapStatus.正常">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SingleVarMapStatus.错误">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.PriorityLevel">
+            <summary>
+            映射优先级
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PriorityLevel.低">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PriorityLevel.中">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PriorityLevel.高">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.SiemensPLCS">
+            <summary>
+            西门子PLC类型
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SiemensPLCS.S1200">
+            <summary>
+            1200系列
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SiemensPLCS.S300">
+            <summary>
+            300
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SiemensPLCS.S400">
+            <summary>
+            400
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SiemensPLCS.S1500">
+            <summary>
+            1500
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SiemensPLCS.S200Smart">
+            <summary>
+            200的smart系列
+            </summary>
+        </member>
+        <member name="F:NPlcMap.SiemensPLCS.S200">
+            <summary>
+            200系统，需要额外配置以太网模块
+            </summary>
+        </member>
+        <member name="T:NPlcMap.DataFormat">
+            <summary>
+            数据格式
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataFormat.ABCD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataFormat.BADC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataFormat.CDAB">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataFormat.DCBA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.DataOperMode">
+            <summary>
+            数据交互方式
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataOperMode.读PLC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataOperMode.写PLC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NPlcMap.MapInfo">
+            <summary>
+            映射信息
+            </summary>
+        </member>
+        <member name="P:NPlcMap.MapInfo.VarName">
+            <summary>
+            本地变量名
+            </summary>
+        </member>
+        <member name="P:NPlcMap.MapInfo.RegAddress">
+            <summary>
+            PLC地址
+            </summary>
+        </member>
+        <member name="P:NPlcMap.MapInfo.DataType">
+            <summary>
+            映射的数据类型
+            </summary>
+        </member>
+        <member name="P:NPlcMap.MapInfo.PriorityLevel">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapInfo.Count">
+            <summary>
+            映射数量
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapInfo.SingleDataByteCount">
+            <summary>
+            单数据字节数
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapInfo.BigEndian">
+            <summary>
+            单数据大端序
+            </summary>
+        </member>
+        <member name="F:NPlcMap.MapInfo.SyncDir">
+            <summary>
+            两边都数据不一致的同步方向
+            </summary>
+        </member>
+        <member name="M:NPlcMap.MapInfo.#ctor">
+            <summary>
+            新实例
+            </summary>
+        </member>
+        <member name="M:NPlcMap.MapInfo.Clone">
+            <summary>
+            深度克隆一个实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.MapInfo.CopyToThis(NPlcMap.MapInfo)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:NPlcMap.DataPLCInfo">
+            <summary>
+            plc信息
+            </summary>
+        </member>
+        <member name="P:NPlcMap.DataPLCInfo.Name">
+            <summary>
+            用户定义名字
+            </summary>
+        </member>
+        <member name="P:NPlcMap.DataPLCInfo.PLCType">
+            <summary>
+            PLC类型
+            </summary>
+        </member>
+        <member name="P:NPlcMap.DataPLCInfo.MinorPLCType">
+            <summary>
+            PLC子类型
+            </summary>
+        </member>
+        <member name="P:NPlcMap.DataPLCInfo.MapDatas">
+            <summary>
+            当前plc映射数据
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataPLCInfo.TimeSpan">
+            <summary>
+            映射的时间间隔, 少于50ms有时候不准
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataPLCInfo.ConnectTimeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataPLCInfo.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataPLCInfo.Port">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataPLCInfo.SiemensPLCs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataPLCInfo.StatusRegAddr">
+            <summary>
+            状态变量
+            </summary>
+        </member>
+        <member name="F:NPlcMap.DataPLCInfo.DataFormat">
+            <summary>
+            字节序类型
+            </summary>
+        </member>
+        <member name="M:NPlcMap.DataPLCInfo.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NPlcMap.DataPLCInfo.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.DataPLCInfo.CopyToThis(NPlcMap.DataPLCInfo)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="T:NPlcMap.PLCVarMappingState">
+            <summary>
+            变量映射状态描述
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLCVarMappingState.Status">
+            <summary>
+            实际状态
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLCVarMappingState.ReTryCount">
+            <summary>
+            连续重试次数, 和时间相关
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLCVarMappingState.ErrorCode">
+            <summary>
+            hsl库通信错误代码
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLCVarMappingState.ErrorMessage">
+            <summary>
+            hsl库通信错误信息
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLCVarMappingState.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:NPlcMap.PLCHelper">
+            <summary>
+            plc映射帮助类
+            </summary>
+        </member>
+        <member name="T:NPlcMap.PLCHelper.PLCMappingStateChangeEventHandler">
+            <summary>
+            PLC 映射数据状态改变的事件委托
+            </summary>
+            <param name="name"></param>
+            <param name="index"></param>
+            <param name="state"></param>
+        </member>
+        <member name="T:NPlcMap.PLCHelper.PLCStateChangeEventHandler">
+            <summary>
+            PLC 连接状态改变的事件委托
+            </summary>
+            <param name="name"></param>
+            <param name="state"></param>
+        </member>
+        <member name="E:NPlcMap.PLCHelper.PLCMappingStateChangeEvent">
+            <summary>
+            PLC 映射数据状态改变事件
+            </summary>
+        </member>
+        <member name="E:NPlcMap.PLCHelper.PLCStateChangeEvent">
+            <summary>
+            PLC 连接状态改变事件
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLCHelper.Instance">
+            <summary>
+            plc映射类的单例
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLCHelper.PLCInfos">
+            <summary>
+            保存的plc信息, 只能查看, 不可操作
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLCHelper.PLCs">
+            <summary>
+            plc实例
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLCHelper.Item(System.String)">
+            <summary>
+            获取指定PLC实例
+            </summary>
+            <param name="key">PLC名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.Init">
+            <summary>
+            初始化, 加载plc配置信息
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.UnInit">
+            <summary>
+            释放plc类
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.GetPLC(System.String)">
+            <summary>
+            获取PLC实例
+            </summary>
+            <param name="name">名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.ReLoadPLC(System.String)">
+            <summary>
+            重新初始化PLC
+            </summary>
+            <param name="name">PLC名字</param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.PLCCtrl(System.String,NPlcMap.PLCMapCtrl)">
+            <summary>
+            PLC操作
+            </summary>
+            <param name="name">PLC名字</param>
+            <param name="ctrl">操作类型</param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.GetPLCState(System.String)">
+            <summary>
+            获取PLC状态
+            </summary>
+            <param name="name">PLC名字</param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.AddPLCInfo(System.String,NPlcMap.DataPLCInfo,System.Boolean)">
+            <summary>
+            添加一个新的plc, 并且进行初始化
+            </summary>
+            <param name="name">PLC名字</param>
+            <param name="info"></param>
+            <param name="bSave"></param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.ModifyPLCInfo(System.String,NPlcMap.DataPLCInfo,System.Boolean)">
+            <summary>
+            修改plc信息
+            </summary>
+            <param name="name">PLC名字</param>
+            <param name="info"></param>
+            <param name="bSave"></param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.RemovePLCInfo(System.String,System.Boolean)">
+            <summary>
+            移除plc
+            </summary>
+            <param name="name">PLC名字</param>
+            <param name="bSave"></param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.AddPLCMappingInfo(System.String,NPlcMap.MapInfo,System.Boolean)">
+            <summary>
+            添加plc映射信息
+            </summary>
+            <param name="name">PLC名字</param>
+            <param name="mapinfo"></param>
+            <param name="bSave"></param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.ModifyPLCMappingInfo(System.String,System.Int32,NPlcMap.MapInfo,System.Boolean)">
+            <summary>
+            修改plc映射信息
+            </summary>
+            <param name="name">PLC名字</param>
+            <param name="index"></param>
+            <param name="mapinfo"></param>
+            <param name="bSave"></param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.RemovePLCMappingInfo(System.String,System.Int32,NPlcMap.MapInfo,System.Boolean)">
+            <summary>
+            移除plc映射信息
+            </summary>
+            <param name="name">PLC名字</param>
+            <param name="index"></param>
+            <param name="dt"></param>
+            <param name="bSave"></param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.GetPLCData(System.String,NPlcMap.MapInfo,NPlcMap.PLC.IPLC.MappingData@)">
+            <summary>
+            获取PLC数据
+            </summary>
+            <param name="name"></param>
+            <param name="md"></param>
+            <param name="data"></param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.StartMapping(System.String)">
+            <summary>
+            开始映射
+            </summary>
+            <param name="name">plc名字</param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.StopMapping(System.String)">
+            <summary>
+            结束映射
+            </summary>
+            <param name="name">plc名字</param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.GetMappingStatus(System.String,System.Int32)">
+            <summary>
+            获取实际映射数据状态
+            </summary>
+            <param name="name">plc名字</param>
+            <param name="index">索引</param>
+            <returns>返回状态</returns>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.Save">
+            <summary>
+            保存配置文件
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLCHelper.Load">
+            <summary>
+            加载配置文件
+            </summary>
+        </member>
+        <member name="T:NPlcMap.PLC.PLCErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.PLCErrorCode.ParamError">
+            <summary>
+            参数错误
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.PLCErrorCode.InitFail">
+            <summary>
+            初始化失败
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.PLCErrorCode.ReadFail">
+            <summary>
+            读错误
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.PLCErrorCode.WriteFail">
+            <summary>
+            写错误
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.PLCErrorCode.NotInit">
+            <summary>
+            未初始化
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.PLCErrorCode.SaveFail">
+            <summary>
+            保存失败
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.PLCErrorCode.PLCNoExist">
+            <summary>
+            PLC不存在
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.PLCErrorCode.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="T:NPlcMap.PLC.IPLC">
+            <summary>
+            所有plc实现的父类
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.IPLC.bIsRunning">
+            <summary>
+            运行时标志
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.IPLC.iTimeSpan">
+            <summary>
+            时间间隔
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.IPLC.bIsInit">
+            <summary>
+            初始化标志
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.IPLC.varCommu">
+            <summary>
+            变量
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MapDatas">
+            <summary>
+            映射信息
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.Info">
+            <summary>
+            PLC信息
+            </summary>
+        </member>
+        <member name="F:NPlcMap.PLC.IPLC.net">
+            <summary>
+            hsl 读写类
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.PLCReadWriteNet">
+            <summary>
+            hsl 读写类的实例
+            </summary>
+        </member>
+        <member name="E:NPlcMap.PLC.IPLC.PLCMappingStateChangeEvent">
+            <summary>
+            PLC 映射数据状态改变事件
+            </summary>
+        </member>
+        <member name="E:NPlcMap.PLC.IPLC.PLCStateChangeEvent">
+            <summary>
+            PLC 连接状态改变事件
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.PLCState">
+            <summary>
+            PLC的状态
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MultiMappingListPLCData">
+            <summary>
+            PLC变量池
+            </summary>
+        </member>
+        <member name="T:NPlcMap.PLC.IPLC.MappingData">
+            <summary>
+            映射数据,对比专用
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MappingData.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MappingData.SValue">
+            <summary>
+            字符型
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MappingData.DValue">
+            <summary>
+            数字型
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MappingData.ValueValid">
+            <summary>
+            指示数据是否有效
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.MappingData.Equals(NPlcMap.PLC.IPLC.MappingData)">
+            <summary>
+            判断相等
+            </summary>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NPlcMap.PLC.IPLC.MultiMappingPLCData">
+            <summary>
+            多组数据池
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MultiMappingPLCData.StartAddress">
+            <summary>
+            plc起始地址
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MultiMappingPLCData.Count">
+            <summary>
+            映射数量
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MultiMappingPLCData.Datas">
+            <summary>
+            当前数据
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.MultiMappingPLCData.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造
+            </summary>
+            <param name="startAddress">plc起始地址</param>
+            <param name="count">映射数量</param>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.PLCLastData">
+            <summary>
+            PLC上一次的数据
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.LocalLastData">
+            <summary>
+            本地变量上一次数据
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.MappingStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NPlcMap.PLC.IPLC.AddressHeader">
+            <summary>
+            地址头加序号
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.Init(NPlcMap.DataPLCInfo)">
+            <summary>
+            初始化所有plc, 并连接
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.UnInit">
+            <summary>
+            反初始化所有plc
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.Read(System.String,System.UInt16,NPlcMap.PLCVarMappingState,System.Byte[]@)">
+            <summary>
+            读PLC
+            </summary>
+            <param name="addr">地址</param>
+            <param name="count">数量</param>
+            <param name="sts">状态</param>
+            <param name="data">数据</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.ReadString(System.String,System.Int32,NPlcMap.PLCVarMappingState,System.String@)">
+            <summary>
+            读字符串
+            </summary>
+            <param name="addr">地址</param>
+            <param name="count">数量</param>
+            <param name="sts">状态</param>
+            <param name="data">数据</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.ReadDigit(System.String,NPlcMap.MapDataType,NPlcMap.PLCVarMappingState,System.Double@)">
+            <summary>
+            读取数字
+            </summary>
+            <param name="addr">地址</param>
+            <param name="dataType">类型</param>
+            <param name="sts">状态</param>
+            <param name="data">数据</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.ReadDigit(System.String,NPlcMap.MapDataType,NPlcMap.PLCVarMappingState,System.Double[])">
+            <summary>
+            读取多个数字
+            </summary>
+            <param name="addr">地址</param>
+            <param name="dataType">类型</param>
+            <param name="sts">状态</param>
+            <param name="data">数据</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.ReadUInt16(System.String,System.Int32,System.UInt16[]@,NPlcMap.PLCVarMappingState)">
+            <summary>
+            读取PLC ushort 类型的数据
+            </summary>
+            <param name="addr">地址</param>
+            <param name="count">读取数量</param>
+            <param name="value">值</param>
+            <param name="sts">PLC映射状态</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.ReadInt16(System.String,System.Int32,System.Int16[]@,NPlcMap.PLCVarMappingState)">
+            <summary>
+            读取PLC short 类型的数据
+            </summary>
+            <param name="addr">地址</param>
+            <param name="count">读取数量</param>
+            <param name="value">值</param>
+            <param name="sts">PLC映射状态</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.Write(System.String,System.Byte[],NPlcMap.PLCVarMappingState)">
+            <summary>
+            写PLC
+            </summary>
+            <param name="addr">地址</param>
+            <param name="data">值</param>
+            <param name="sts">状态</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.WriteString(System.String,System.Int32,System.String,NPlcMap.PLCVarMappingState)">
+            <summary>
+            写字符串
+            </summary>
+            <param name="addr">地址</param>
+            <param name="count">数量</param>
+            <param name="data">值</param>
+            <param name="sts">状态</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.WriteDigit(System.String,NPlcMap.MapDataType,System.Double,NPlcMap.PLCVarMappingState)">
+            <summary>
+            写数字
+            </summary>
+            <param name="addr">地址</param>
+            <param name="dataType">数据类型</param>
+            <param name="data">值</param>
+            <param name="sts">状态</param>
+            <returns>错误返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.GetPLCData(NPlcMap.MapInfo,NPlcMap.PLCVarMappingState)">
+            <summary>
+            获取PLC数据
+            </summary>
+            <param name="data"></param>
+            <param name="sts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.SetPLCState(NPlcMap.PLCState)">
+            <summary>
+            设置PLC状态
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.StartMapping">
+            <summary>
+            开始映射
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.StopMapping">
+            <summary>
+            停止映射
+            </summary>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.Mapping(System.UInt32)">
+            <summary>
+            主映射函数
+            </summary>
+            <param name="count"></param>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.LocalSetData(NPlcMap.PLC.IPLC.MappingData,NPlcMap.MapInfo)">
+            <summary>
+            设置本地数据
+            </summary>
+            <param name="data"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.PLCSetData(NPlcMap.PLC.IPLC.MappingData,NPlcMap.MapInfo,NPlcMap.PLCVarMappingState)">
+            <summary>
+            设置到PLC
+            </summary>
+            <param name="data">数据,包括数据类型</param>
+            <param name="info">写入的地址等信息</param>
+            <param name="sts">写入状态</param>
+            <returns>失败返回错误代码</returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.GetMappingStatus(System.Int32)">
+            <summary>
+            获取PLC映射状态
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.SplitEOF(System.String)">
+            <summary>
+            分割\0
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.SetError(System.Int32)">
+            <summary>
+            设置plc错误到plc的错误变量
+            </summary>
+            <param name="errorCode"></param>
+        </member>
+        <member name="M:NPlcMap.PLC.IPLC.Log(HslCommunication.OperateResult,NPlcMap.PLCVarMappingState)">
+            <summary>
+            根据读写状态设置plc状态和打印log
+            </summary>
+            <param name="res"></param>
+            <param name="sts"></param>
+        </member>
+        <member name="M:NPlcMap.PLC.Inovance.Init(NPlcMap.DataPLCInfo)">
+            <summary>
+            初始化 PLC
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NPlcMap.PLC.Inovance.UnInit">
+            <summary>
+            反初始化
+            </summary>
+        </member>
+    </members>
+</doc>

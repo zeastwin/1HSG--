@@ -1,0 +1,2 @@
+[note]
+curPointFile=收料丝杆步进

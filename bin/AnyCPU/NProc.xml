@@ -1,0 +1,755 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NProc</name>
+    </assembly>
+    <members>
+        <member name="F:NProc.NAction.m_monitorList">
+            <summary>
+            List 为MonitorType数量  Dictionary为监控关键字及监控到的值
+            </summary>
+        </member>
+        <member name="M:NProc.NAction.CheckMonitor(System.String,NProcUnit.MonitorType,System.String,System.String)">
+            <summary>
+            检查监控,值符合监控要求的，输出信息
+            </summary>
+            <param name="pos">监控位置</param>
+            <param name="type">监控类型</param>
+            <param name="obj">送给监控器比较的对象如IO名，工站名</param>   
+            <param name="info">监视对象的信息</param>     
+        </member>
+        <member name="M:NProc.NAction.CheckVarSet(NProcUnit.InstctBase,System.Int32,NProcUnit.VarDataType,System.String,System.Boolean,NVarConfig.VarInfo,System.String)">
+            <summary>
+            检查变量设置
+            </summary>
+            <param name="ib">指令实例</param>
+            <param name="addr">变量地址</param>
+            <param name="dataType">变量类型</param>
+            <param name="val">变量设置值</param>
+            <param name="bsave">true为保存变量</param>
+            <param name="info">变量信息，类型为varinfo时有效</param>
+            <param name="addInfo">提示额外信息，用于报警信息和打印log</param>
+            <returns>true为设置成功，false为失败</returns>
+        </member>
+        <member name="M:NProc.NAction.WriteLog(NProcUnit.InstctBase,System.String,System.String,System.Object[])">
+            <summary>
+            打印指令log，属于强制打印
+            </summary>
+            <param name="ib">指令结构基类</param>
+            <param name="format">格式</param>
+            <param name="name">打印类型名称</param>
+            <param name="obj">打印参数</param>
+        </member>
+        <member name="M:NProc.CTTask.NoteCTClip(System.String,System.Boolean)">
+            <summary>
+            计算记录时间片段
+            </summary>
+            <param name="clipName">片段名称</param>
+            <param name="head">0增加片段  1片段头  2保存一条记录到文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:NProc.CTTask.SaveToFile(System.String)">
+            <summary>
+            保存一个计时任务到表格
+            </summary>
+            <param name="path">表格地址</param>
+        </member>
+        <member name="T:NProc.InfoEdit">
+            <summary>
+            流程信息编辑处理
+            </summary>
+        </member>
+        <member name="M:NProc.InfoEdit.GetJumpMapByID(System.Int32,System.Int32,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            根据ID获取跳转列表
+            </summary>
+            <param name="procid"></param>
+            <param name="ibid"></param>
+            <param name="jumplist"></param>
+        </member>
+        <member name="T:NProc.Proc">
+            <summary>
+            流程类
+            </summary>
+        </member>
+        <member name="T:NProc.ProcManager">
+            <summary>
+            启动及运行时
+            </summary>
+        </member>
+        <member name="M:NProc.ProcManager.PSysLisen">
+            <summary>
+            检测流程配置里面的复位和启动
+            </summary>
+        </member>
+        <member name="T:NProcUnit.StationNameList">
+            <summary>
+            工站名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.PointFileNameList">
+            <summary>
+            工站点文件名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.StationPointList">
+            <summary>
+            工站点位名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.StationAxisList">
+            <summary>
+            工站轴名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.OutIOList">
+            <summary>
+            输出IO名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.InIOList">
+            <summary>
+            输入IO名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.JumpList">
+            <summary>
+            跳转列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.RGNameList">
+            <summary>
+            变量名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.AdcNameList">
+            <summary>
+            模拟量名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.NumbList">
+            <summary>
+            数字列表下拉
+            </summary>
+        </member>
+        <member name="T:NProcUnit.StructNameList">
+            <summary>
+            结构体列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.StructItemNameList">
+            <summary>
+            数据结构项名称列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.RegNameConverter">
+            <summary>
+            集合显示
+            </summary>
+        </member>
+        <member name="T:NProcUnit.NArrayConverter">
+            <summary>
+            数组
+            </summary>
+        </member>
+        <member name="T:NProcUnit.CommunitNameList">
+            <summary>
+            通讯对象列表
+            </summary>
+        </member>
+        <member name="T:NProcUnit.InstctBase">
+            <summary>
+            指令结构基类
+            </summary>
+        </member>
+        <member name="M:NProcUnit.InstctBase.Addrs2ConstSwtich(System.String)">
+            <summary>
+            地址与常量使用切换
+            </summary>
+            <param name="prepertName"></param>
+        </member>
+        <member name="M:NProcUnit.InstctBase.SaveVisableStatus(System.String,System.Boolean)">
+            <summary>
+            保存属性显示状态
+            </summary>
+            <param name="propretName"></param>
+            <param name="visb"></param>
+        </member>
+        <member name="M:NProcUnit.InstctBase.GetVisableStatus(System.String)">
+            <summary>
+            获取属性显示状态
+            </summary>
+            <param name="propretName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.InstctBase.GetSubInfo(System.Int16,System.String[]@,System.Double[]@)">
+            <summary>
+            外部查询子类信息接口        
+            </summary>
+            <param name="cmd"></param> 
+            0 工站点位使用表
+            1 IO使用表
+            2 变量使用表
+            3 工站控制表(控制运动)
+            <param name="strData">string[5]存储空间</param>
+            <param name="dData">double[5]存储空间</param>
+        </member>
+        <member name="M:NProcUnit.InstctBase.DipCloseProcess">
+            <summary>
+            ui显示关闭时后期处理,如ifjump用于恢复公共属性报"警类型"的显示显示
+            </summary>
+        </member>
+        <member name="M:NProcUnit.InstctBase.DipOpenProcess">
+            <summary>
+            ui显示初始化时处理,用特定的属性隐藏
+            </summary>
+        </member>
+        <member name="M:NProcUnit.InstctBase.UpdateSource(System.Int16)">
+            <summary>
+            由于变量插入导致的地址变更;0:变量错位更新  1:变量名变化更新   2:工站点位变化更新；调用该接口主动更新
+            </summary>
+        </member>
+        <member name="M:NProcUnit.InstctBase.UpdateVisable">
+            <summary>
+            显示需要的参数属性(最优为第一次从文件加载时调用
+            </summary>
+        </member>
+        <member name="P:NProcUnit.InstctBase.Index">
+            <summary>
+            步骤索引
+            </summary>
+        </member>
+        <member name="P:NProcUnit.InstctBase.ProcID">
+            <summary>
+            基类流程索引
+            </summary>
+        </member>
+        <member name="P:NProcUnit.InstctBase.ID">
+            <summary>
+            基类流程 hashcode
+            </summary>
+        </member>
+        <member name="P:NProcUnit.InstctBase.Name">
+            <summary>
+            点位名称
+            </summary>
+        </member>
+        <member name="P:NProcUnit.InstctBase.JumpPos">
+            <summary>
+            点位唯一跳转列表
+            </summary>
+        </member>
+        <member name="P:NProcUnit.InstctBase.Disable">
+            <summary>
+            禁用
+            </summary>
+        </member>
+        <member name="P:NProcUnit.InstctBase.BreakP">
+            <summary>
+            断点
+            </summary>
+        </member>
+        <member name="M:NProcUnit.N200SetStructItem.DisP">
+            <summary>
+            根据数量显示数据项
+            </summary>
+        </member>
+        <member name="T:NProcUnit.ActionTypeList">
+            <summary>
+            指令集
+            </summary>
+        </member>
+        <member name="T:NProcUnit.MoveIOType1">
+            <summary>
+            插补胶量控制类型
+            </summary>
+        </member>
+        <member name="T:NProcUnit.SinglePtCtrType">
+            <summary>
+            单点胶量控制类型
+            </summary>
+        </member>
+        <member name="T:NProcUnit.Unit">
+            <summary>
+            流程
+            </summary>
+        </member>
+        <member name="T:NProcUnit.Unit.SendMessageEvent">
+            <summary>
+            消息处理回调
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="F:NProcUnit.Unit.NotifyEvent">
+            <summary>
+            发送消息事件
+            </summary>
+        </member>
+        <member name="E:NProcUnit.Unit.WarnMessageEventHandler">
+            <summary>
+            指令报警事件
+            </summary>
+        </member>
+        <member name="M:NProcUnit.Unit.GetInstance">
+            <summary>
+            获取流程操作实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.RegistNotifyEvent(NProcUnit.Unit.SendMessageEvent)">
+            <summary>
+            注册消息处理
+            </summary>
+            <param name="sevent">消息事件</param>
+        </member>
+        <member name="M:NProcUnit.Unit.SetWarmOut(NProcUnit.WarmOut)">
+            <summary>
+            流程报警回调
+            </summary>
+            <param name="callback">WarmOut类型回调函数</param>
+        </member>
+        <member name="M:NProcUnit.Unit.SaveProc(System.Int32,System.String)">
+            <summary>
+            保存指定索引的流程
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <param name="path">保存路径</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.GetProcInfo(System.Int32)">
+            <summary>
+            获取流程信息
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.GetProc(System.Int32)">
+            <summary>
+            获取流程
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.InsertProc(System.Int32,NProcUnit.ProcInfo)">
+            <summary>
+            插入流程
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <param name="pinfo">流程信息</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.DelProc(System.Int32)">
+            <summary>
+            删除流程
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.InsertStep(System.Int32,System.Int16,NProcUnit.StepInfo)">
+            <summary>
+            插入步骤
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <param name="step">步骤ID</param>
+            <param name="sinfo">步骤信息</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.DelStep(System.Int32,System.Int16)">
+            <summary>
+            删除步骤
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <param name="step">步骤ID</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.ModifStep(System.Int32,System.Int16,NProcUnit.StepInfo)">
+             <summary>
+            修改步骤
+             </summary>
+             <param name="procIndex">流程ID</param>
+             <param name="step">步骤ID</param>
+             <param name="sf">步骤信息</param>
+             <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.InsertPoint(System.Int32,System.Int16,System.Int16,NProcUnit.InstctBase)">
+            <summary>
+            插入流程点位
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <param name="step">步骤ID</param>
+            <param name="ptIndex">点位ID</param>
+            <param name="ptinfo">点位信息</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.DelPoint(System.Int32,System.Int16,System.Int16)">
+            <summary>
+            删除流程点位
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <param name="step">步骤ID</param>
+            <param name="ptIndex">点位ID</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.ModifPoint(System.Int32,System.Int16,System.Int16,NProcUnit.InstctBase)">
+            <summary>
+            修改流程点位
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <param name="step">步骤ID</param>
+            <param name="ptIndex">点位ID</param>
+            <param name="ptInfo">点位信息</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.ModifProc(System.Int32,System.String)">
+            <summary>
+            修改流程名称
+            </summary>
+            <param name="procIndex">流程ID</param>
+            <param name="name">流程新名称</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PStop(System.Int32)">
+            <summary>
+            停止流程
+            </summary>
+            <param name="id">流程ID</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PPause(System.Int32)">
+            <summary>
+            暂停流程
+            </summary>
+            <param name="id">流程ID</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PUseStationCtr(System.Int32,System.Int16,System.Boolean)">
+            <summary>
+            流程使用工站监控
+            </summary>
+            <param name="id">流程ID</param>
+            <param name="stationID">工站ID</param>
+            <param name="cmd">true为开始，false为结束</param>
+        </member>
+        <member name="M:NProcUnit.Unit.PRun(System.Int32,System.Int16,System.Boolean)">
+            <summary>
+            运行一个流程
+            </summary>
+            <param name="id">流程 索引 或 hashcode </param>
+            <param name="modle">0启动流程 1全速执行 3自启动流程</param>
+            <param name="idIsHashCode"> 第一个参数是 索引 或是 hashcode </param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PRunNext(System.Int32)">
+            <summary>
+            单步
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PJumpStep(System.Int32,System.Int16,System.Int16,System.Int16,System.Int32,System.Boolean)">
+            <summary>
+            跳转执行
+            </summary>
+            <param name="id">流程号</param>
+            <param name="stepIndex">步骤号</param>
+            <param name="ptIndex">点位号</param>
+            <param name="runModle">跳转运行模式，0跳转后执行，否则跳转后暂停（用于设定启动位置）</param>
+            <param name="fatherID">以函数的形式调用</param>
+            <param name="bIsExtCall">如果是发送处理消息过来的需要是true</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.FunRun(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Double[],System.String[],NProcUnit.RegName[])">
+            <summary>
+            流程的函数运行模式
+            </summary>
+            <param name="fatherID">以函数的形式调用</param>
+            <param name="id">流程ID</param>
+            <param name="startStep">启动点步骤</param>
+            <param name="startPt">启动点点位</param>
+            <param name="modle">启动模式</param>
+            <param name="ddata">double类型参数</param>
+            <param name="sdata">string类型参数</param>
+            <param name="rdata">变量类型参数</param>
+            <returns>失败返回-1</returns>
+        </member>
+        <member name="M:NProcUnit.Unit.SetReturnCode(System.Int32,System.Int32)">
+            <summary>
+            设置返回值
+            </summary>
+            <param name="id"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.FunFatherList(System.Int32)">
+            <summary>
+            父列表
+            </summary>
+            <param name="procIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PLoadProc(System.Int32,System.String)">
+            <summary>
+            重载某个流程
+            </summary>
+            <param name="procIndex"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PUpdadeProc(System.Collections.Generic.List{NProcUnit.ProcInfo})">
+            <summary>
+            更新流程
+            </summary>
+            <param name="procList">流程信息列表</param>
+        </member>
+        <member name="M:NProcUnit.Unit.PGetProcStatus(System.Int32,NProcUnit.ProcStatus@)">
+            <summary>
+            获取流程状态
+            </summary>
+            <param name="id">流程ID</param>
+            <param name="status">流程当前状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PGetProcCount">
+            <summary>
+            获取流程数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.PCloseWarnLight">
+            <summary>
+            关闭流程报警灯
+            </summary>
+        </member>
+        <member name="M:NProcUnit.Unit.PModifyWarnIO(NProcUnit.ProcInfo,System.Int16)">
+            <summary>
+            修改流程报警IO
+            </summary>
+            <param name="pinfo">流程信息</param>
+            <param name="type"></param>
+        </member>
+        <member name="M:NProcUnit.Unit.AddMonitor(NProcUnit.MonitorType,System.String)">
+            <summary>
+            增加监控点
+            </summary>
+            <param name="type">监控类型</param>
+            <param name="mrName">监控点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.RemoveMonitor(System.String)">
+            <summary>
+            删除监控点
+            </summary>
+            <param name="mrName">监控点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NProcUnit.Unit.RegisterMonitor(NProcUnit.MonitorOut)">
+            <summary>
+            注册监控点
+            </summary>
+            <param name="callBack">MonitorOut 回调函数</param>
+        </member>
+        <member name="P:NProcUnit.Unit.SystemStatus">
+            <summary>
+            获取系统状态
+            </summary>
+        </member>
+        <member name="M:NProcUnit.Unit.GetJumpMapByID(System.Int32,System.Int32,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            根据ID获取跳转信息
+            </summary>
+            <param name="procid">流程ID</param>
+            <param name="ibid">指令ID</param>
+            <param name="jumplist">跳转列表</param>
+        </member>
+        <member name="M:NProcUnit.Unit.GetProcIndex(System.Int32)">
+            <summary>
+            通过流程hashid获取当前流程号
+            </summary>
+            <param name="prochashcode">hashID</param>
+            <returns>流程号</returns>
+        </member>
+        <member name="T:NProcUnit.ProcStatus">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcStatus.curStep">
+            <summary>
+            当前步骤
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcStatus.curPoint">
+            <summary>
+            当前点位
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcStatus.status">
+            <summary>
+            指令状态
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcStatus.msg">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="M:NProcUnit.ProcStatus.Equals(NProcUnit.ProcStatus)">
+            <summary>
+            比较函数
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NProcUnit.ProcWarmRecord">
+            <summary>
+            流程报警信息
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcWarmRecord.warntype">
+            <summary>
+            报警类型
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcWarmRecord.warncode">
+            <summary>
+            报警代码
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcWarmRecord.warnmsg">
+            <summary>
+            报警信息
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcWarmRecord.duration">
+            <summary>
+            持续时间
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcWarmRecord.starttime">
+            <summary>
+            报警开始时间
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ProcWarmRecord.endtime">
+            <summary>
+            报警结束时间
+            </summary>
+        </member>
+        <member name="M:NProcUnit.ProcWarmRecord.#ctor">
+            <summary>
+            报警构造方法
+            </summary>
+        </member>
+        <member name="T:NProcUnit.RUNCMD">
+            <summary>
+            运行指令
+            </summary>
+        </member>
+        <member name="F:NProcUnit.RUNCMD.ALL">
+            <summary>
+            全速运行
+            </summary>
+        </member>
+        <member name="F:NProcUnit.RUNCMD.STEP">
+            <summary>
+            单步运行
+            </summary>
+        </member>
+        <member name="F:NProcUnit.RUNCMD.STEPWAIT">
+            <summary>
+            单步等待
+            </summary>
+        </member>
+        <member name="T:NProcUnit.ActionStatus">
+            <summary>
+            指令运行状态
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.IDE">
+            <summary>
+            就绪
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.RUNING">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.STOP">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.PAUSE">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.WARM">
+            <summary>
+            报警
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.JUMP">
+            <summary>
+            跳转
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.WAIT_BOXPROC">
+            <summary>
+            等待弹框处理
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.STEP">
+            <summary>
+            单步模式
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.BREAK">
+            <summary>
+            进入断点
+            </summary>
+        </member>
+        <member name="F:NProcUnit.ActionStatus.RETURN">
+             <summary>
+            返回 
+             </summary>
+        </member>
+        <member name="T:NProcUnit.SystemStatus">
+            <summary>
+            全局系统状态
+            </summary>
+        </member>
+        <member name="T:NProcUnit.ProcStartType">
+            <summary>
+            流程启动方式
+            </summary>
+        </member>
+        <member name="T:NProcUnit.NotifyInfo">
+            <summary>
+            消息通知类
+            </summary>
+        </member>
+        <member name="P:NProcUnit.NotifyInfo.Name">
+            <summary>
+            流程点位名称
+            </summary>
+        </member>
+        <member name="P:NProcUnit.NotifyInfo.ProcID">
+            <summary>
+            流程ID
+            </summary>
+        </member>
+        <member name="P:NProcUnit.NotifyInfo.StepID">
+            <summary>
+            步骤ID
+            </summary>
+        </member>
+        <member name="P:NProcUnit.NotifyInfo.PointID">
+            <summary>
+            点位ID
+            </summary>
+        </member>
+    </members>
+</doc>

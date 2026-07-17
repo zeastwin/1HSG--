@@ -1,0 +1,54 @@
+﻿{
+    "serials": {
+        "fg": "bcSn"
+
+    },
+    "data": {
+        "insight": {
+            "test_attributes": {
+                "test_result": "Consequence",
+                "uut_start": "InTime",
+                "uut_stop": "OutTime"
+
+            },
+            "test_station_attributes": {
+                "line_id": "线体编号(line_id)",
+                "software_name": "软件名(software_name)",
+                "software_version": "软件版本(software_version)",
+                "station_id": "机台编号(station_id)"
+
+            },
+            "uut_attributes": {
+                "bc_window_assy_start_time": "assemblyStartTime",
+                "fixture_id": "carrySn",
+                "glue_dispense_start_time": "glueStartTime",
+                "cavity_id": "当前复检索引",
+                "mesh_lot": "防尘网批次号(mesh_lot)",
+                "mesh_station_vendor": "防尘网厂商(mesh_station_vendor)",
+                "station_vendor":  "机台厂商(station_vendor)"
+            },
+            "results": [
+                {"result": "pass","test": "glue_open_time","units": "s", "value": "glueOpenTime","upper_limit": "120.000","lower_limit": "0.000"},
+                { "result": "pass", "test": "maximum_outer_diameter", "units": "mm", "value": "glueOutDiameter", "upper_limit": "26.1", "lower_limit": "25" },
+                { "result": "pass", "test": "minimum_outer_diameter", "units": "mm", "value": "glueInDiameter", "upper_limit": "26.1", "lower_limit": "25" },
+                { "result": "pass", "test": "concentricity", "units": "mm", "value": "concentricCircles", "upper_limit": "0.1", "lower_limit": "0" },
+                { "result": "pass", "test": "maximum_glue_width", "units": "mm", "value": "glueWidthMax", "upper_limit": "1.1", "lower_limit": "0.63" },
+                { "result": "pass", "test": "minimum_glue_width", "units": "mm", "value": "glueWidthMin", "upper_limit": "1.1", "lower_limit": "0.63" },
+                { "result": "pass", "test": "glue_mixing_ratio", "units": "NA", "value": "mixRate", "upper_limit": "11", "lower_limit": "9" },
+                { "result": "pass", "test": "glue_releasing_speed", "units": "ul", "value": "ontimeRate", "upper_limit": "", "lower_limit": "" },
+                { "result": "pass", "test": "wd_assembly_angle", "units": "T", "value": "wdAngleData", "upper_limit": "91", "lower_limit": "89" },
+                { "result": "pass", "test": "wd_angle_offset", "units": "T", "value": "wdAngleOffset", "upper_limit": "1", "lower_limit": "-1" },
+                { "result": "pass", "test": "FI2_W1", "units": "mm", "value": "FI2Data[0]", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W2", "units": "mm", "value": "FI2Data[1]", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W3", "units": "mm", "value": "FI2Data[2]", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W4", "units": "mm", "value": "FI2Data[3]", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W5", "units": "mm", "value": "FI2Data[4]", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W6", "units": "mm", "value": "FI2Data[5]", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_wDiff", "units": "mm", "value": "", "upper_limit": "2.000", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI6_H1", "units": "mm", "value": "FI6Data[0]", "upper_limit": "1.050", "lower_limit": "0.650" },
+                { "result": "pass", "test": "FI6_H2", "units": "mm", "value": "FI6Data[1]", "upper_limit": "1.050", "lower_limit": "0.650" },
+                { "result": "pass", "test": "FI6_H3", "units": "mm", "value": "FI6Data[2]", "upper_limit": "1.050", "lower_limit": "0.650" },
+                { "result": "pass", "test": "FI6_H4", "units": "mm", "value": "FI6Data[3]", "upper_limit": "1.050", "lower_limit": "0.650" }
+            ]
+        }
+    }}

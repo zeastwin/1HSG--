@@ -1,0 +1,3 @@
+名称,URL,Log文件路径,Josn文件名称,Http提交类型,CSV信息路径
+查询,http://10.9.2.30:90/IGET_Manage/Set_AssembleResistance,D:\Data\MesLog\系统日期.txt,HttpBatteryCheckModel.json,POST,\MachineConfig\MESConfig\查询csv.json
+过站,http://10.9.2.30:90/IGET_Manage/Set_AssembleBake,D:\Data\MesLog\系统日期.txt,HttpPassModel.json,POST,\MachineConfig\MESConfig\过站csv.json

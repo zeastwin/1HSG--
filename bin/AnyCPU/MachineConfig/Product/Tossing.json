@@ -1,0 +1,304 @@
+{
+  "_List_Dataheader": [
+    {
+      "Match": "时间",
+      "UI_Subitem_Description": "时间",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": 200
+    },
+    {
+      "Match": "all",
+      "UI_Subitem_Description": "投入",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": 100
+    },
+    {
+      "Match": "OK",
+      "UI_Subitem_Description": "良品",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": 100
+    },
+    {
+      "Match": "NG",
+      "UI_Subitem_Description": "次品",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": 100
+    },
+    {
+      "Match": "RFID-NG",
+      "UI_Subitem_Description": "RFID-NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "隧道炉时间异常抛NG",
+      "UI_Subitem_Description": "隧道炉时间异常抛NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "玻璃扫码异常抛NG",
+      "UI_Subitem_Description": "玻璃扫码异常抛NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "点胶工站写RFID异常抛NG",
+      "UI_Subitem_Description": "点胶工站写RFID异常抛NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "MES异常抛NG",
+      "UI_Subitem_Description": "MES异常抛NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "Gap-测高NG",
+      "UI_Subitem_Description": "Gap-测高NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "点胶-保压时间异常抛NG",
+      "UI_Subitem_Description": "点胶-保压时间异常抛NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "GapNG",
+      "UI_Subitem_Description": "GapNG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "测高NG",
+      "UI_Subitem_Description": "测高NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "钛大比亚迪防呆NG",
+      "UI_Subitem_Description": "钛大比亚迪防呆NG",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    },
+    {
+      "Match": "良率",
+      "UI_Subitem_Description": "良率",
+      "Total": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "UI_Subitem_Width": -1
+    }
+  ]
+}

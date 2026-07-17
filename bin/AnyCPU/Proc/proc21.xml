@@ -1,0 +1,660 @@
+<流程21 Type="NProcUnit.ProcInfo, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+  <pauseIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="10">
+    <Index1 IsNULL="True" />
+    <Index2 IsNULL="True" />
+    <Index3 IsNULL="True" />
+    <Index4 IsNULL="True" />
+    <Index5 IsNULL="True" />
+    <Index6 IsNULL="True" />
+    <Index7 IsNULL="True" />
+    <Index8 IsNULL="True" />
+    <Index9 IsNULL="True" />
+    <Index10 IsNULL="True" />
+  </pauseIO>
+  <continIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="3">
+    <Index1 IsNULL="True" />
+    <Index2 IsNULL="True" />
+    <Index3 IsNULL="True" />
+  </continIO>
+  <stepList Type="System.Collections.Generic.List`1[[NProcUnit.StepInfo, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" ElementType="NProcUnit.StepInfo, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Index1 Type="NProcUnit.StepInfo, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <enable Type="Boolean" Value="False" />
+      <name Type="String" Value="0" />
+      <pointList Type="System.Collections.Generic.List`1[[NProcUnit.InstctBase, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" ElementType="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Index1 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="数据结构到对象吸嘴1" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="343916592" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index1>
+        <Index2 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="生成产品数据" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="247156810" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index2>
+        <Index3 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="更新界面产量数据" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="2052112039" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index3>
+        <Index4 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="开始计算CT" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="1427134350" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index4>
+        <Index5 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="结束计算CT" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="1286598677" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index5>
+        <Index6 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="LF信息查询上传" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="651723289" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index6>
+        <Index7 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="查询防尘网" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="542710574" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index7>
+        <Index8 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="工装数据获取(60001,1000,3,点胶工站穴位结果,穴位1-结果,穴位2-结果,穴位3-结果,穴位4-结果,压盖板时间)" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="385049261" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+          <wMsgID Type="String" Value="0045" />
+        </Index8>
+        <Index9 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="True" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="测试" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="1061020387" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index9>
+        <Index10 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="开始计算CT" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="950815436" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index10>
+        <Index11 Type="NProcUnit.N73SendProcess, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <nowait Type="Boolean" Value="False" />
+          <instctType Type="NProcUnit.ActionTypeList, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="103" />
+          <typeName Type="String" Value="发送处理消息" />
+          <name Type="String" Value="结束计算CT" />
+          <index Type="Int16" Value="0" />
+          <procID Type="Int32" Value="21" />
+          <id Type="Int32" Value="1487395393" />
+          <fatherID Type="Int32" Value="0" />
+          <jumpPos Type="System.String[]:System.Array" ElementType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="String" Value="" />
+            <Index2 Type="String" Value="" />
+            <Index3 Type="String" Value="" />
+            <Index4 Type="String" Value="" />
+            <Index5 Type="String" Value="" />
+            <Index6 Type="String" Value="" />
+          </jumpPos>
+          <jumpKey Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="6">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+            <Index3 Type="Int32" Value="0" />
+            <Index4 Type="Int32" Value="0" />
+            <Index5 Type="Int32" Value="0" />
+            <Index6 Type="Int32" Value="0" />
+          </jumpKey>
+          <warmType Type="NProcUnit.WarmType, NProc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null:ENUM" Value="0" />
+          <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+            <Index1 IsNULL="True" />
+            <Index2 IsNULL="True" />
+          </warnIO>
+          <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+            <Index1 Type="Int32" Value="0" />
+            <Index2 Type="Int32" Value="0" />
+          </warnTime>
+          <disable Type="Boolean" Value="False" />
+          <breakP Type="Boolean" Value="False" />
+          <warnLightself Type="Boolean" Value="False" />
+          <visabList Type="System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+            <Key1 Type="String" Value="WarmMsgID" />
+            <Value1 Type="Boolean" Value="False" />
+            <Key2 Type="String" Value="YesJumpPos" />
+            <Value2 Type="Boolean" Value="False" />
+            <Key3 Type="String" Value="NoJumpPos" />
+            <Value3 Type="Boolean" Value="False" />
+            <Key4 Type="String" Value="CancelJumpPos" />
+            <Value4 Type="Boolean" Value="False" />
+            <Key5 Type="String" Value="WarmType" />
+            <Value5 Type="Boolean" Value="True" />
+          </visabList>
+          <dval Type="System.Collections.Generic.List`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <cval Type="System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+          <comm1 Type="Double" Value="0" />
+          <actionLog Type="Boolean" Value="False" />
+          <noPause Type="Boolean" Value="False" />
+        </Index11>
+      </pointList>
+    </Index1>
+  </stepList>
+  <pauseCount Type="Int16" Value="1" />
+  <pauseAddr Type="Int32" Value="-1" />
+  <continueVarIdx Type="Int32" Value="0" />
+  <ioWtCnt Type="Int16" Value="1" />
+  <startIOCnt Type="Int16" Value="1" />
+  <initCount Type="String" Value="1,5" />
+  <name Type="String" Value="Test" />
+  <id Type="Int32" Value="946450517" />
+  <noInfoLog Type="Boolean" Value="False" />
+  <noWarnLog Type="Boolean" Value="False" />
+  <noErrorLog Type="Boolean" Value="False" />
+  <selfStart Type="Boolean" Value="False" />
+  <ReturnVal Type="Int32" Value="0" />
+  <errorCodeAddr Type="Int32" Value="0" />
+  <warnIO Type="System.String[]:System.Array" ElementType="System.String" Dimension="2">
+    <Index1 IsNULL="True" />
+    <Index2 IsNULL="True" />
+  </warnIO>
+  <warnTime Type="System.Int32[]:System.Array" ElementType="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="2">
+    <Index1 Type="Int32" Value="0" />
+    <Index2 Type="Int32" Value="0" />
+  </warnTime>
+  <contiModle Type="System.Boolean[]:System.Array" ElementType="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Dimension="3">
+    <Index1 Type="Boolean" Value="False" />
+    <Index2 Type="Boolean" Value="False" />
+    <Index3 Type="Boolean" Value="False" />
+  </contiModle>
+</流程21>

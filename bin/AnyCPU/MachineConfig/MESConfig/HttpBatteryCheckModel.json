@@ -1,0 +1,13 @@
+{
+"sn":"MES(查询SN)",
+"barcode":"BATTERY|MES查询(BatCode),BATT CELL|MES查询(BatCellCode)",
+"line":"线体名",
+"station":"查询工站名"
+"app":"PTL",
+"fixid":"BAT_S1_SM_B",
+"errcode":"",
+"carrier":"",
+"p":"checkcomp",
+"WO":"",
+"PN":""
+}

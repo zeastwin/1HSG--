@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NAdc</name>
+    </assembly>
+    <members>
+        <member name="T:NAdc.Adc">
+            <summary>
+            模拟量模块
+            </summary>
+        </member>
+        <member name="F:NAdc.Adc.m_writeAdc">
+            <summary>
+            写入模拟量的值
+            </summary>
+        </member>
+        <member name="F:NAdc.Adc.m_writeAdcName">
+            <summary>
+            获取模拟量的名称
+            </summary>
+        </member>
+        <member name="P:NAdc.Adc.AdcCount">
+             <summary>
+            模拟量数量
+             </summary>
+        </member>
+        <member name="P:NAdc.Adc.AdcInfoList">
+            <summary>
+            模拟量集合
+            </summary>
+        </member>
+        <member name="M:NAdc.Adc.GetInstance">
+            <summary>
+            获取模拟量实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NAdc.Adc.CRC16Calc(System.Byte[],System.Int32)">
+            <summary>
+            CRC校验
+            </summary>
+            <param name="data">校验数据</param>
+            <param name="len">校验长度</param>
+            <returns>高低8位</returns>
+        </member>
+        <member name="M:NAdc.Adc.CRC16Calc(System.String)">
+            <summary>
+            CRC校验   
+            </summary>
+            <param name="data">校验数据</param>
+            <returns>高低8位</returns>
+        </member>
+        <member name="M:NAdc.Adc.AddAdc">
+            <summary>
+            添加新的模拟量
+            </summary>
+        </member>
+        <member name="M:NAdc.Adc.GetAdcInfo(System.Int32)">
+            <summary>
+            根据索引获取模拟量信息
+            </summary>
+            <param name="index">模拟量索引</param>
+            <returns>模拟量信息结构</returns>
+        </member>
+        <member name="M:NAdc.Adc.DelAdc(System.Int32)">
+            <summary>
+            删除模拟量
+            </summary>
+            <param name="index">模拟量索引</param>
+        </member>
+        <member name="M:NAdc.Adc.UpdateAdc(System.Int32,NAdc.ADCInfo)">
+            <summary>
+            更新模拟量信息
+            </summary>
+            <param name="index">模拟量索引</param>
+            <param name="info">需要更新的模拟量信息</param>
+        </member>
+        <member name="M:NAdc.Adc.GetAdcIndex(NAdc.ADCInfo)">
+            <summary>
+            获取模拟量索引
+            </summary>
+            <param name="info">已经有名称的模拟量结构</param>
+            <returns>成功返回模拟量索引，失败返回-1</returns>
+        </member>
+        <member name="M:NAdc.Adc.ReadAdc(System.String,NAdc.EM_ADC_READ_MODE)">
+            <summary>
+            读取单个模拟量
+            </summary>
+            <param name="AdcName">模拟量名称</param>
+            <param name="modle">模式,EM_ADC_READ_MODE类型</param>
+            <returns>失败返回-99999999</returns>
+        </member>
+        <member name="M:NAdc.Adc.ReadMultipleAdc(System.String,NAdc.EM_ADC_READ_MODE,System.Int32)">
+            <summary>
+            读取多个模拟量
+            </summary>
+            <param name="AdcName">模拟量名称</param>
+            <param name="modle">模式,EM_ADC_READ_MODE类型</param>
+            <param name="count">读取个数，返回对应个数的doule类型的数据列表</param>
+            <returns>失败返回null,成功返回double类型列表</returns>
+        </member>
+        <member name="M:NAdc.Adc.WriteAdc(System.String,System.Double)">
+             <summary>
+            模拟量写入 
+             </summary>
+             <param name="Adcname">模拟量名称</param>
+             <param name="val">写入值</param>
+             <returns>成功返回0，失败返回-99999999</returns>
+        </member>
+        <member name="M:NAdc.Adc.ComplexWriteCmd(NAdc.EM_HWType,System.Int32,System.Double,System.Byte[]@,System.Int32@)">
+            <summary>
+            格式化写入指令
+            </summary>
+            <param name="id">类型</param>
+            <param name="index">通道索引</param>
+            <param name="val">值</param>
+            <param name="outBuff">指令输出</param>
+            <param name="sendlen">指令长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:NAdc.Adc.Get_CheckXor(System.Byte[])">
+            <summary>
+            BCC和校验代码
+            </summary>
+            <param name="data">需要校验的数据包</param>
+            <returns></returns>
+        </member>
+        <member name="M:NAdc.Adc.GetBCCXorCode(System.Byte[])">
+            <summary>
+            BCC和校验代码返回16进制
+            </summary>
+            <param name="data">需要校验的数据包</param>
+            <returns></returns>
+        </member>
+        <member name="M:NAdc.Adc.Bcc(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Bcc校验
+            </summary>
+            <param name="buffer">byte数组</param>
+            <param name="start">起始位置</param>
+            <param name="len">校验长度</param>
+            <returns>byte数组</returns>
+        </member>
+        <member name="M:NAdc.Adc.toBCC(System.String)">
+            <summary>
+            Bcc校验
+            </summary>
+            <param name="s">校验字符串</param>
+            <returns>校验后的byte数组</returns>
+        </member>
+        <member name="M:NAdc.Adc.toFCS(System.String)">
+            <summary>
+            帧校验函数FCS
+            </summary>
+            <param name="s">原始字符</param>
+            <returns>校验结果</returns>
+        </member>
+        <member name="M:NAdc.Adc.StrToByte(System.String,System.Int32)">
+            <summary>
+            字符串按位转化为byte数组
+            </summary>
+            <param name="sdata">源字符串</param>
+            <param name="splitNum">转换位数</param>
+            <returns>byte数组</returns>
+        </member>
+        <member name="M:NAdc.Adc.CRC16(System.String)">
+            <summary>
+            CRC16校验
+            </summary>
+            <param name="sdata">校验字符</param>
+            <returns>byte[]类型的校验结果</returns>
+        </member>
+        <member name="M:NAdc.Adc.CRC16_IBM(System.String)">
+            <summary>
+            CRC16_IBM校验
+            </summary>
+            <param name="s">校验字符</param>
+            <returns>byte[]类型的校验结果</returns>
+        </member>
+        <member name="M:NAdc.Adc.ByteToStrHex(System.Byte[])">
+             <summary>
+            byte[]转化为16进制字符串
+             </summary>
+             <param name="bts">byte数组</param>
+             <returns>16进制字符串</returns>
+        </member>
+        <member name="M:NAdc.Adc.StrHexToBytes(System.String)">
+            <summary>
+            16进制字符串转化byte数组
+            </summary>
+            <param name="hexstr">16进制字符串</param>
+            <returns>返回转化后的byte数组</returns>
+        </member>
+        <member name="T:NAdc.ADCInfo">
+            <summary>
+            模拟量信息类
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.name">
+            <summary>
+            模拟量名称
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.type">
+            <summary>
+            类型 0.采集卡 1.串口 2.网口
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.card">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.node">
+            <summary>
+            节点号/站号
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.index">
+            <summary>
+            索引,通道号
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.objID">
+            <summary>
+            通讯对象ID
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.codeID">
+            <summary>
+            命令编码ID
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.Hwtype">
+            <summary>
+            硬件类型
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.k">
+            <summary>
+            直线方程系数k
+            </summary>
+        </member>
+        <member name="F:NAdc.ADCInfo.c">
+             <summary>
+            直线方程常数c 
+             </summary>
+        </member>
+        <member name="M:NAdc.ADCInfo.#ctor">
+            <summary>
+            模拟量构造函数
+            </summary>
+        </member>
+        <member name="P:NAdc.ADCInfo.Name">
+            <summary>
+            模拟量名称
+            </summary>
+        </member>
+        <member name="P:NAdc.ADCInfo.userType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:NAdc.ADCInfo.Card">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:NAdc.ADCInfo.Node">
+            <summary>
+            模块号/站号
+            </summary>
+        </member>
+        <member name="P:NAdc.ADCInfo.Index">
+            <summary>
+            通道索引
+            </summary>
+        </member>
+        <member name="P:NAdc.ADCInfo.ObjID">
+            <summary>
+            通讯对象ID
+            </summary>
+        </member>
+        <member name="P:NAdc.ADCInfo.HWtype">
+            <summary>
+            硬件类型
+            </summary>
+        </member>
+        <member name="P:NAdc.ADCInfo.CodeID">
+            <summary>
+            命令编码
+            </summary>
+        </member>
+        <member name="T:NAdc.EM_ADCType">
+            <summary>
+            模拟量接口类型
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ADCType.采集卡">
+            <summary>
+            采集卡类型
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ADCType.串口">
+            <summary>
+            串口类型
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ADCType.网口">
+            <summary>
+            网口类型
+            </summary>
+        </member>
+        <member name="T:NAdc.EM_HWType">
+            <summary>
+            模拟量硬件类型
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.PLC">
+            <summary>
+            PLC
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.鑫精诚压力传感器_COM">
+            <summary>
+            鑫金诚串口压力传感器
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.鑫精诚压力传感器_TCP">
+            <summary>
+            鑫金诚网口压力传感器
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.欧姆龙温度传感器">
+            <summary>
+            欧姆龙温度传感器
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.欧姆龙位移传感器">
+            <summary>
+            欧姆龙位移传感器
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.MTL位移传感器">
+            <summary>
+            MTL位移传感器
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.基恩士位移传感器">
+            <summary>
+            基恩士位移传感器
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.MLD位移传感器">
+            <summary>
+            明治位移传感器
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.余姚精温度传感器">
+            <summary>
+            余姚精温度传感器
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_HWType.自定义">
+            <summary>
+            自定义
+            </summary>
+        </member>
+        <member name="T:NAdc.EM_ITEMS">
+            <summary>
+            模拟量信息
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ITEMS.名称">
+            <summary>
+            模拟量名称
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ITEMS.类型">
+            <summary>
+            模拟量硬件类型
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ITEMS.系数K">
+            <summary>
+            模拟量校正系数
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ITEMS.系数C">
+            <summary>
+            模拟量校正常量
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ITEMS.原始值">
+            <summary>
+            模拟量读取原始值
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ITEMS.标定值">
+            <summary>
+            模拟量校正值
+            </summary>
+        </member>
+        <member name="T:NAdc.EM_WATCH_ITEMS">
+            <summary>
+            模拟量值监控
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_WATCH_ITEMS.原始值最大值">
+            <summary>
+            原始值最大值
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_WATCH_ITEMS.原始值最小值">
+             <summary>
+            原始值最小值
+             </summary>
+        </member>
+        <member name="F:NAdc.EM_WATCH_ITEMS.标定值最大值">
+            <summary>
+            标定值最大值
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_WATCH_ITEMS.标定值最小值">
+            <summary>
+            标定值最小值
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_WATCH_ITEMS.原始比较值">
+            <summary>
+            原始比较值
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_WATCH_ITEMS.标定比较值">
+            <summary>
+            标定比较值
+            </summary>
+        </member>
+        <member name="T:NAdc.WatchInfo">
+            <summary>
+            模拟量绘图监控
+            </summary>
+        </member>
+        <member name="F:NAdc.WatchInfo.AdcName">
+            <summary>
+            监控模拟量名称
+            </summary>
+        </member>
+        <member name="F:NAdc.WatchInfo.row">
+            <summary>
+            监控模拟量索引
+            </summary>
+        </member>
+        <member name="F:NAdc.WatchInfo.ADlist">
+            <summary>
+            模拟量AD图列表
+            </summary>
+        </member>
+        <member name="F:NAdc.WatchInfo.DAlist">
+            <summary>
+            模拟量DA图列表
+            </summary>
+        </member>
+        <member name="T:NAdc.EM_ADC_READ_MODE">
+            <summary>
+            读取模拟量模式
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ADC_READ_MODE.原始值">
+            <summary>
+            模拟量读取原始值
+            </summary>
+        </member>
+        <member name="F:NAdc.EM_ADC_READ_MODE.标定值">
+            <summary>
+            模拟量校正值
+            </summary>
+        </member>
+    </members>
+</doc>

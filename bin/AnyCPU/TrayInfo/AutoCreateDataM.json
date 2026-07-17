@@ -1,0 +1,159 @@
+{
+    "data": {
+        "insight": {
+            "results": [
+                {
+                    "result": "pass",
+                    "test": "glue_open_time",
+                    "units": "s",
+                    "value": "51.713"
+                },
+                {
+                    "result": "pass",
+                    "test": "maximum_outer_diameter",
+                    "units": "mm",
+                    "value": "24.760"
+                },
+                {
+                    "result": "pass",
+                    "test": "minimum_outer_diameter",
+                    "units": "mm",
+                    "value": "24.500"
+                },
+                {
+                    "result": "pass",
+                    "test": "concentricity",
+                    "units": "mm",
+                    "value": "0.100"
+                },
+                {
+                    "result": "pass",
+                    "test": "maximum_glue_width",
+                    "units": "mm",
+                    "value": "0.900"
+                },
+                {
+                    "result": "pass",
+                    "test": "minimum_glue_width",
+                    "units": "mm",
+                    "value": "0.710"
+                },
+                {
+                    "result": "pass",
+                    "test": "glue_mixing_ratio",
+                    "units": "NA",
+                    "value": "10.300"
+                },
+                {
+                    "result": "pass",
+                    "test": "wd_assembly_angle",
+                    "units": "T",
+                    "value": "89.970"
+                },
+                {
+                    "result": "pass",
+                    "test": "wd_angle_offset",
+                    "units": "T",
+                    "value": "-0.030"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI2_W1",
+                    "units": "mm",
+                    "value": "0.070"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI2_W2",
+                    "units": "mm",
+                    "value": "0.030"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI2_W3",
+                    "units": "mm",
+                    "value": "0.030"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI2_W4",
+                    "units": "mm",
+                    "value": "0.030"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI2_W5",
+                    "units": "mm",
+                    "value": "0.050"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI2_W6",
+                    "units": "mm",
+                    "value": "0.070"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI6_H1",
+                    "units": "mm",
+                    "value": "0.850"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI6_H2",
+                    "units": "mm",
+                    "value": "0.880"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI6_H3",
+                    "units": "mm",
+                    "value": "0.890"
+                },
+                {
+                    "result": "pass",
+                    "test": "FI6_H4",
+                    "units": "mm",
+                    "value": "0.850"
+                }
+            ],
+            "test_attributes": {
+                "test_result": "pass",
+                "unit_serial_number": "F9WH7X000ZQ0000JXH",
+                "uut_start": "2024-07-18 21:35:05",
+                "uut_stop": ""
+            },
+            "test_station_attributes": {
+                "line_id": "1D6F-01",
+                "software_name": "HSG上料机",
+                "software_version": "V3.0",
+                "station_id": "LFKY_1D6F-01_OQC01_DEVELOPMENT1"
+            },
+            "uut_attributes": {
+                "bc_window_assy_start_time": "2024-07-18 23:20:04",
+                "bc_window_sn": "",
+                "cavity_id": "1",
+                "fixture_id": "C-LG-00058",
+                "glue_dispense_start_time": "2024-07-18 23:19:17",
+                "mesh_lot": "52024",
+                "mesh_station_vendor": "EW",
+                "oven_assy_time": "",
+                "oven_start_time": "",
+                "oven_stop_time": "",
+                "plasma_start_time": "2024-07-18 23:08:08",
+                "plasma_stop_time": "2024-07-18 23:08:10",
+                "prima_expiry_date": "2024-07-04 20:02:28",
+                "prima_lot": "3090510",
+                "prima_start_time": "2024-07-18 23:08:26",
+                "prima_stop_time": "2024-07-18 23:08:29",
+                "prima_vendor": "ITW",
+                "standing_start_time": "2024-07-18 23:08:51",
+                "standing_stop_time": "2024-07-18 23:18:31",
+                "station_vendor": "EW"
+            }
+        }
+    },
+    "serials": {
+        "fg": "F9WH7X000ZQ0000JXH"
+    }
+}

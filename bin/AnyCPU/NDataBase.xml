@@ -1,0 +1,736 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NDataBase</name>
+    </assembly>
+    <members>
+        <member name="T:NDataBase.CSV">
+            <summary>
+            用于CSV文件的读写，加载以后数据以二维表的形式返回。
+            主要用法如下：
+            <example>  
+            CSV csv = new CSV("C:\\input\\data.csv");  // 初始化    
+            string c0_1 = csv[0,1];         // 读取 
+            csv[1, 5] = "jack";             // 写入 
+            csv.Save("c:\\output\\data1.csv");          // 保存 
+            </example>
+            </summary>
+        </member>
+        <member name="P:NDataBase.CSV.CsvEncoding">
+            <summary>
+            文件的编码。
+            </summary>
+        </member>
+        <member name="P:NDataBase.CSV.TrimColumns">
+            <summary>
+            表示是否要进行列的裁剪操作。
+            </summary>
+        </member>
+        <member name="P:NDataBase.CSV.CsvSeparator">
+            <summary>
+            CSV的分隔符，默认为半角逗号（即,）。
+            </summary>
+        </member>
+        <member name="P:NDataBase.CSV.Data">
+            <summary>
+            所有的数据都保存在些数组中。
+            </summary>
+        </member>
+        <member name="M:NDataBase.CSV.#ctor">
+            <summary>
+            CSV是一种通用的使用逗号隔开的二维表的结构文件。
+            </summary>
+        </member>
+        <member name="M:NDataBase.CSV.#ctor(System.String)">
+            <summary>
+            通过指定的CSV文件进行加载。返回一个二维矩阵。
+            </summary>
+            <param name="filepath"></param>
+        </member>
+        <member name="M:NDataBase.CSV.#ctor(System.String,System.Text.Encoding)">
+            <summary>
+            通过指定的CSV文件进行加载。
+            </summary>
+            <param name="filepath">指定的CSV文件路径。</param>
+            <param name="encoding">CSV文本的编码。</param>
+        </member>
+        <member name="P:NDataBase.CSV.RowCount">
+            <summary>
+            返回CSV二维数列的总行数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:NDataBase.CSV.ColumnCount">
+            <summary>
+            返回CSV二维数列的总列数。
+            </summary>
+        </member>
+        <member name="M:NDataBase.CSV.GetData(System.Int32,System.Int32)">
+            <summary>
+            返回指定行列的值，如果超出数据返回值为 null。
+            </summary>
+            <param name="row">指定行。</param>
+            <param name="column">指定列。</param>
+            <returns></returns>
+        </member>
+        <member name="P:NDataBase.CSV.Item(System.Int32,System.Int32)">
+            <summary>
+            读写CSV指定单元格，下标从0开始。如果不在范围内，则会操作失败，处理方式如下：
+            读=返回null；写=返回false。
+            </summary>
+            <param name="row">指定的行。</param>
+            <param name="column">指定的列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.CSV.AddColumn(System.String[],System.Int32)">
+            <summary>
+            在指定行添加一行数据内容为""的字符数列。
+            输入数据的行数必需与 RowCount 相同，超出部分被裁掉，不足部分用""补充。
+            要插入的行的位置小于0的按0处理，大于等于RowCount的按RowCount处理。
+            </summary>
+            <param name="columnData">输入数据。</param>
+            <param name="columnID">需要添加的行的序号。</param>
+        </member>
+        <member name="M:NDataBase.CSV.RemoveColumn(System.Int32)">
+            <summary>
+            删除指定的某个列。
+            </summary>
+            <param name="columnId">待删除列的ID，范围为[0, ColumnCount)。</param>
+        </member>
+        <member name="M:NDataBase.CSV.RemoveColumns(System.Int32[])">
+            <summary>
+            删除指定的多个列。
+            </summary>
+            <param name="columnIds">待删除列的列的编号，可以是多个列。如果不在范围内，不会处理；如果有重复，只会处理1次。</param>
+        </member>
+        <member name="M:NDataBase.CSV.AddRow(System.String[],System.Int32)">
+            <summary>
+            在指定行添加一行数据内容为""的字符数列。
+            输入数据的长度必需与 ColumnCount相同，超出部分被裁掉，不足部分用""补充。
+            要插入的行的位置小于0的按0处理，大于等于RowCount的按RowCount处理。
+            </summary>
+            <param name="strs">输入数据。</param>
+            <param name="rowID">需要添加的行的序号。</param>
+        </member>
+        <member name="M:NDataBase.CSV.AddRow(System.Int32,System.String[])">
+            <summary>
+            在指定行添加一行数据内容为""的字符数列。
+            </summary>
+            <param name="rowNo">待插入的行号。</param>
+            <param name="rowdata">待插入的数据。</param>
+        </member>
+        <member name="M:NDataBase.CSV.IsInRange(System.Int32,System.Int32)">
+            <summary>
+            判断指定行列的单元格是否在范围内。
+            </summary>
+            <param name="row">指定的行编号。</param>
+            <param name="column">指定的列编号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.CSV.SetData(System.Int32,System.Int32,System.String)">
+            <summary>
+            为指定编号的行列的单元格赋值。
+            </summary>
+            <param name="row">所要设置的行。</param>
+            <param name="column">所要设置的列。</param>
+            <param name="value">所要设置的值。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.CSV.Read(System.String)">
+            <summary>
+            读取CSV数据文件, 目前的版本不支持带有分隔符的内容。
+            </summary>
+            <param name="csvfile">待加载的CSV文件。</param>
+        </member>
+        <member name="M:NDataBase.CSV.GetListCsvData(System.String)">
+            <summary>
+            将数据转换为二维列表。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.CSV.AddTile(System.String[])">
+            <summary>
+            //添加表头
+            </summary>
+            <param name="rowdata"></param>
+        </member>
+        <member name="M:NDataBase.CSV.ParseContinueLine(System.String)">
+            <summary>
+            处理未完成的Csv单行
+            </summary>
+            <param name="line">数据源</param>
+            <returns>元素列表</returns>
+        </member>
+        <member name="M:NDataBase.CSV.ParseLine(System.String)">
+            <summary>
+            解析一行CSV数据。
+            </summary>
+            <param name="line">待分析的行。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.CSV.Save(System.String)">
+            <summary>
+            将数据进行保存，默认使用编号进行保存。 
+            </summary>
+            <param name="outcsvfile">需要保存的路径。</param>
+        </member>
+        <member name="M:NDataBase.CSV.ToString">
+            <summary>
+            以二维表的形式返回氖Data的内容，同一行的相邻数据使用\t\t分隔。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:NDataBase.DataBaseInterface">
+            <summary>
+            数据库操作类
+            </summary>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.GetInstance">
+            <summary>
+            获取数据操作类实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.OpenDataBase(System.String)">
+             <summary>
+            打开数据库 
+             </summary>
+             <param name="path">数据表路径</param>
+             <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.InsertData(System.String,NDataBase.InsertDataInfo[])">
+            <summary>
+            插入数据
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="idata">插入的数据，数据类型是InsertDataInfo</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.InsertData(System.String,NDataBase.InsertInfo[])">
+            <summary>
+            插入数据
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="idata">插入的数据，数据类型是InsertInfo</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.DeleteData(System.String,NDataBase.UpdateDataInfo,System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="data">数据</param>
+            <param name="op"></param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.UpdateData(System.String,NDataBase.UpdateDataInfo,NDataBase.UpdateDataInfo)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="data">更新数据信息</param>
+            <param name="condition">更新条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.QueryData(System.String,NDataBase.QueryDataInfo[],System.Data.DataTable@,System.Int32)">
+            <summary>
+            查询数据库
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="pars">条件</param>
+            <param name="dt">查询到的值</param>
+            <param name="limit">限制查询到的条数，负数不限制</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.QueryData(System.String,System.String,System.Data.DataTable@,System.String)">
+            <summary>
+            查询数据库
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="sqlWhere">条件</param>
+            <param name="dt">查询到的值</param>
+            <param name="limit">限制查询到的条数，负数不限制</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.GetRowLength(System.String,System.Int32@,System.String)">
+            <summary>
+            查询数据库
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="length">查询的行数</param>
+            <param name="sqlWhere">查询条件</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.GetfieldInfo(System.String,System.Collections.Generic.List{NDataBase.ColParam}@)">
+            <summary>
+            获取表的字段名称
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="fieldInfos">字段参数</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.GetTableName(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            获取数据表名称
+            </summary>
+            <param name="tablenames">数据表名称列表</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.ExecuteSQLStatement(System.String)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="sql">标准SQL语句</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.CreateTable(System.String,NDataBase.ColParam[])">
+            <summary>
+            创建数据表
+            </summary>
+            <param name="name">数据表</param>
+            <param name="prms">列参数</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.DeleteTable(System.String)">
+            <summary>
+            删除数据表
+            </summary>
+            <param name="name">数据表</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.AlterTableName(System.String,System.String)">
+            <summary>
+            修改表名
+            </summary>
+            <param name="OldTableName">旧数据表名称</param>
+            <param name="NewTableName">新数据表名称</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.AlterColName(System.String,System.String,System.String)">
+            <summary>
+            修改数据表字段名称
+            </summary>
+            <param name="OldTableName">旧数据表</param>
+            <param name="oldColName">字段名称</param>
+            <param name="NewTableName">新数据表</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.InsertOneCol(System.String,NDataBase.ColParam)">
+            <summary>
+            在当前表最后一列插入一列
+            </summary>
+            <param name="tableName">数据表</param>
+            <param name="idata">列参数</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.DeleteOneCol(System.String,System.String)">
+            <summary>
+            删除某一列数据
+            </summary>
+            <param name="tableName">数据表</param>
+            <param name="name">列名称</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="M:NDataBase.DataBaseInterface.IsTableExist(System.String,System.Boolean@)">
+            <summary>
+            查看数据表是否存在
+            </summary>
+            <param name="tableName">数据表</param>
+            <param name="result">true：表存在，false：无此表</param>
+            <returns>SQL数据库错误码</returns>
+        </member>
+        <member name="T:NDataBase.SQLiteTypeEnum">
+            <summary>
+            SQL数据类型
+            </summary>
+        </member>
+        <member name="F:NDataBase.SQLiteTypeEnum.Type_Null">
+            <summary>
+            null
+            </summary>
+        </member>
+        <member name="F:NDataBase.SQLiteTypeEnum.String">
+            <summary>
+            String
+            </summary>
+        </member>
+        <member name="F:NDataBase.SQLiteTypeEnum.Int">
+            <summary>
+            Int32
+            </summary>
+        </member>
+        <member name="F:NDataBase.SQLiteTypeEnum.Double">
+            <summary>
+            Double
+            </summary>
+        </member>
+        <member name="F:NDataBase.SQLiteTypeEnum.DateTime">
+            <summary>
+            DbType
+            </summary>
+        </member>
+        <member name="T:NDataBase.ColParam">
+            <summary>
+            列参数
+            </summary>
+        </member>
+        <member name="F:NDataBase.ColParam.colName">
+            <summary>
+            列名称
+            </summary>
+        </member>
+        <member name="F:NDataBase.ColParam.colType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="M:NDataBase.ColParam.#ctor">
+             <summary>
+            列参数构造
+             </summary>
+        </member>
+        <member name="M:NDataBase.ColParam.#ctor(System.String,NDataBase.SQLiteTypeEnum)">
+            <summary>
+            列参数构造
+            </summary>
+            <param name="colName">列名称</param>
+            <param name="colType">数据类型</param>
+        </member>
+        <member name="T:NDataBase.InsertDataInfo">
+            <summary>
+            插入的数据
+            </summary>
+        </member>
+        <member name="F:NDataBase.InsertDataInfo.DataType">
+            <summary>
+            SQL数据类型
+            </summary>
+        </member>
+        <member name="F:NDataBase.InsertDataInfo.data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NDataBase.InsertDataInfo.#ctor">
+            <summary>
+            插入数据构造
+            </summary>
+        </member>
+        <member name="M:NDataBase.InsertDataInfo.#ctor(System.Object,NDataBase.SQLiteTypeEnum)">
+            <summary>
+            插入数据构造
+            </summary>
+            <param name="data">数据</param>
+            <param name="DataType">SQL数据类型</param>
+        </member>
+        <member name="T:NDataBase.InsertInfo">
+            <summary>
+            插入数据
+            </summary>
+        </member>
+        <member name="F:NDataBase.InsertInfo.colName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="F:NDataBase.InsertInfo.DataType">
+            <summary>
+            SQL数据类型
+            </summary>
+        </member>
+        <member name="F:NDataBase.InsertInfo.data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NDataBase.InsertInfo.#ctor">
+            <summary>
+            插入数据构造
+            </summary>
+        </member>
+        <member name="M:NDataBase.InsertInfo.#ctor(System.String,System.Object,NDataBase.SQLiteTypeEnum)">
+            <summary>
+            插入数据构造
+            </summary>
+            <param name="colname">字段名称</param>
+            <param name="data">数据</param>
+            <param name="DataType">SQL数据类型</param>
+        </member>
+        <member name="T:NDataBase.UpdateDataInfo">
+            <summary>
+            更新或删除
+            </summary>
+        </member>
+        <member name="F:NDataBase.UpdateDataInfo.colName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="F:NDataBase.UpdateDataInfo.DataType">
+            <summary>
+            SQL数据类型
+            </summary>
+        </member>
+        <member name="F:NDataBase.UpdateDataInfo.data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="M:NDataBase.UpdateDataInfo.#ctor">
+            <summary>
+            更新构造
+            </summary>
+        </member>
+        <member name="M:NDataBase.UpdateDataInfo.#ctor(System.String,System.Object,NDataBase.SQLiteTypeEnum)">
+            <summary>
+            更新构造
+            </summary>
+            <param name="colName">字段名称</param>
+            <param name="data">数据</param>
+            <param name="DataType">SQL数据类型</param>
+        </member>
+        <member name="T:NDataBase.QueryDataInfo">
+            <summary>
+            查询数据类
+            </summary>
+        </member>
+        <member name="F:NDataBase.QueryDataInfo.colName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="F:NDataBase.QueryDataInfo.DataType">
+            <summary>
+            SQL数据类型
+            </summary>
+        </member>
+        <member name="F:NDataBase.QueryDataInfo.data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="F:NDataBase.QueryDataInfo.conditionOP">
+            <summary>
+            条件判断操作符
+            </summary>
+        </member>
+        <member name="F:NDataBase.QueryDataInfo.op">
+            <summary>
+            逻辑操作符,and 或 or; 用来连接下一个查询条件,为空表示下一个表达式无效
+            </summary>
+        </member>
+        <member name="M:NDataBase.QueryDataInfo.#ctor">
+            <summary>
+            查询构造
+            </summary>
+        </member>
+        <member name="M:NDataBase.QueryDataInfo.#ctor(System.String,NDataBase.SQLiteTypeEnum,System.Object,System.String,System.String)">
+            <summary>
+            查询构造
+            </summary>
+            <param name="colName">字段名称</param>
+            <param name="DataType">SQL数据类型</param>
+            <param name="data">数据</param>
+            <param name="conditionOP">条件判断操作符</param>
+            <param name="op">逻辑操作符</param>
+        </member>
+        <member name="T:NDataBase.SQLiteManagment">
+            <summary>
+            SQL管理类
+            </summary>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.CreateDateBase(System.String)">
+            <summary>
+            创建数据库
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.DeleteDataBase(System.String)">
+            <summary>
+            删除数据库
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.OpenDataBase(System.String)">
+            <summary>
+            打开数据库
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.Close">
+            <summary>
+            关闭数据库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.CreateTable(System.String,NDataBase.ColParam[])">
+            <summary>
+            根据参数创建表
+            </summary>
+            <param name="name"></param>
+            <param name="prms"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.DeleteTable(System.String)">
+            <summary>
+            删除表
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.InsertOneCol(System.String,NDataBase.ColParam)">
+            <summary>
+            在当前表最后一列插入一列
+            </summary>
+            <param name="tableName"></param>
+            <param name="idata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.InsertData(System.String,NDataBase.InsertDataInfo[])">
+            <summary>
+            插入一行数据, 数据必须按顺序
+            插入失败返回错误代码
+            </summary>
+            <param name="tableName">表名字</param>
+            <param name="idata">插入的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.InsertData(System.String,NDataBase.InsertInfo[])">
+            <summary>
+            插入数据，可单独插入某列数据
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="idata">插入的数据集合</param>
+            <returns>成功返回：SqliteErrorCode.Success ；失败返回错误代码</returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.DeleteData(System.String,NDataBase.UpdateDataInfo,System.String)">
+            <summary>
+            删除指定表中符合条件的行
+            </summary>
+            <param name="tableName"></param>
+            <param name="data"></param>
+            <param name="op">比较操作符</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.UpdateData(System.String,NDataBase.UpdateDataInfo,NDataBase.UpdateDataInfo)">
+            <summary>
+            根据指定条件更新数据
+            </summary>
+            <param name="tableName"></param>
+            <param name="data">更新的数据</param>
+            <param name="condition">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.QueryData(System.String,NDataBase.QueryDataInfo[],System.Data.DataTable@,System.Int32)">
+            <summary>
+            根据指定条件查询指定表的数据
+            </summary>
+            <param name="tableName">表名字</param>
+            <param name="pars">条件</param>
+            <param name="dt">查询到的值</param>
+            <param name="limit">限制查询到的条数，负数不限制</param>
+            <returns>错误代码</returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.QueryData(System.String,System.String,System.Data.DataTable@,System.String)">
+            <summary>
+            根据指定条件查询指定表的数据
+            例：WHERE Id>0
+            </summary>
+            <param name="tableName"></param>
+            <param name="sqlWhere">包含 WHERE 的简单条件表达式</param>
+            <param name="dt"></param>
+            <param name="limit">限制查询到的条数，负数不限制</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.GetRowLength(System.String,System.Int32@,System.String)">
+            <summary>
+            获取指定表有几行数据
+            </summary>
+            <param name="tableName"></param>
+            <param name="length"></param>
+            <param name="sqlWhere">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.GetfieldInfo(System.String,System.Collections.Generic.List{NDataBase.ColParam}@)">
+            <summary>
+            获取表的字段名称
+            </summary>
+            <param name="tableName">表的名称</param>
+            <param name="fieldInfos">字段集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.GetTableName(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            获取当前数据库中所有的表名
+            </summary>
+            <param name="tablenames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.AlterTableName(System.String,System.String)">
+            <summary>
+            修改表名
+            </summary>
+            <param name="OldTableName">旧表名</param>
+            <param name="NewTableName">新表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.AlterColName(System.String,System.String,System.String)">
+            <summary>
+            修改数据表字段名称
+            </summary>
+            <param name="tableName">数据表</param>
+            <param name="oldColName">旧表名</param>
+            <param name="newColName">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.IsTableExist(System.String,System.Boolean@)">
+            <summary>
+            判断数据表是否存在
+            </summary>
+            <param name="tableName">数据表名称</param>
+            <param name="result">判断结果，true为存在，false为不存在</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.DeleteCol(System.String,System.String)">
+            <summary>
+            删除字段
+            </summary>
+            <param name="tableName">表名称</param>
+            <param name="colname">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.ExecuteSQL(System.String)">
+            <summary>
+            执行SQL语句,有错误抛出异常
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.ExecuteSQLStatement(System.String)">
+            <summary>
+            执行SQL语句,有错误抛出异常
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="M:NDataBase.SQLiteManagment.GetTypeByString(System.String)">
+            <summary>
+            lDbType转换为C#数据类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NDataBase.WarnLogWriter">
+            <summary>
+            报警日志
+            </summary>
+        </member>
+        <member name="M:NDataBase.WarnLogWriter.WriteWarnLog(System.String[])">
+            <summary>
+            写报警log
+            </summary>
+            <param name="msg">报警信息</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{05B81A89-423E-40E4-AD75-3D409B1C8724}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NsDemo</RootNamespace>
+    <AssemblyName>NsDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release32\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\EW.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\Debug64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\bin\Debug32\ANeuarSys.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\bin\Release64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ANeuarSys.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\AnyCPU\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\bin\Debug32\ANeuarSys.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\..\bin\AnyCPU\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ANeuarSys.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ANeuarSys">
+      <HintPath>..\bin\AnyCPU\ANeuarSys.exe</HintPath>
+    </Reference>
+    <Reference Include="libzkfpcsharp">
+      <HintPath>..\..\NS_V3.0.0_20240226_隧道炉上料\NsDemo\IdDevice\libzkfpcsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\AnyCPU\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NCard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\AnyCPU\NCard.dll</HintPath>
+    </Reference>
+    <Reference Include="NCommon">
+      <HintPath>..\bin\AnyCPU\NCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="NCommunicationTool">
+      <HintPath>..\bin\AnyCPU\NCommunicationTool.dll</HintPath>
+    </Reference>
+    <Reference Include="NConfigFrm">
+      <HintPath>..\bin\AnyCPU\NConfigFrm.dll</HintPath>
+    </Reference>
+    <Reference Include="NDataBase">
+      <HintPath>..\bin\AnyCPU\NDataBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\参考\灌胶机LK新版(20240106)\bin\AnyCPU\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\AnyCPU\NInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="NLicense">
+      <HintPath>..\bin\AnyCPU\NLicense.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\bin\AnyCPU\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLogin">
+      <HintPath>..\bin\AnyCPU\NLogin.dll</HintPath>
+    </Reference>
+    <Reference Include="NMotionCtrl">
+      <HintPath>..\bin\AnyCPU\NMotionCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="NProc">
+      <HintPath>..\bin\AnyCPU\NProc.dll</HintPath>
+    </Reference>
+    <Reference Include="NRTLog">
+      <HintPath>..\bin\AnyCPU\NRTLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NSerialPort">
+      <HintPath>..\bin\AnyCPU\NSerialPort.dll</HintPath>
+    </Reference>
+    <Reference Include="NSocket">
+      <HintPath>..\bin\AnyCPU\NSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="NStructConfig">
+      <HintPath>..\bin\AnyCPU\NStructConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="NUser">
+      <HintPath>..\bin\AnyCPU\NUser.dll</HintPath>
+    </Reference>
+    <Reference Include="NVarConfig">
+      <HintPath>..\bin\AnyCPU\NVarConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="NWarnConfig">
+      <HintPath>..\bin\AnyCPU\NWarnConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Net.Http">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreWork.cs" />
+    <Compile Include="IdDevice\IIdDevice.cs" />
+    <Compile Include="IdDevice\NFCReader.cs" />
+    <Compile Include="IdDevice\Translation_Message.cs" />
+    <Compile Include="IdDevice\UI_FingerPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdDevice\UI_FingerPrint.Designer.cs">
+      <DependentUpon>UI_FingerPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdDevice\ZKFinger.cs" />
+    <Compile Include="MachineDebug\DebugUI_UPH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MachineDebug\DebugUI_UPH.Designer.cs">
+      <DependentUpon>DebugUI_UPH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesSys\BaseInfo.cs" />
+    <Compile Include="MesSys\bc_window_assy_mesinfo.cs" />
+    <Compile Include="MesSys\CommStruct.cs" />
+    <Compile Include="MesSys\CSVInfo.cs" />
+    <Compile Include="MesSys\mesh_lot.cs" />
+    <Compile Include="MesSys\MES_Fun.cs" />
+    <Compile Include="PCode\procuctCode.cs" />
+    <Compile Include="NS\AlamerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NS\AlamerView.Designer.cs">
+      <DependentUpon>AlamerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NS\CSV.cs" />
+    <Compile Include="NS\DataTossing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NS\DataTossing.Designer.cs">
+      <DependentUpon>DataTossing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NS\DataUph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NS\DataUph.Designer.cs">
+      <DependentUpon>DataUph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NS\DataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NS\DataView.Designer.cs">
+      <DependentUpon>DataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NS\FormStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NS\FormStart.designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NS\LogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NS\LogView.Designer.cs">
+      <DependentUpon>LogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpDlg.Designer.cs">
+      <DependentUpon>OpDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NS\MLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NS\MLogin.Designer.cs">
+      <DependentUpon>MLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Products.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DebugApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugApp.Designer.cs">
+      <DependentUpon>DebugApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RFIDSys\RFIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RFIDSys\RFIDForm.Designer.cs">
+      <DependentUpon>RFIDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFIDSys\RFTool.cs" />
+    <Compile Include="RFIDSys\Tool.cs" />
+    <Compile Include="RFIDSys\US_RFID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RFIDSys\US_RFID.Designer.cs">
+      <DependentUpon>US_RFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\AnalyzeJson.cs" />
+    <Compile Include="Utility\GlobalEvent.cs" />
+    <Compile Include="Utility\LogHelper.cs" />
+    <Compile Include="Utility\LogWriter.cs" />
+    <Compile Include="Utility\MesTestJson.cs" />
+    <Compile Include="Virtual IO\UI_VirtualIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Virtual IO\UI_VirtualIO.Designer.cs">
+      <DependentUpon>UI_VirtualIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Virtual IO\Virtual_IO_TCP.cs" />
+    <EmbeddedResource Include="IdDevice\UI_FingerPrint.resx">
+      <DependentUpon>UI_FingerPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineDebug\DebugUI_UPH.resx">
+      <DependentUpon>DebugUI_UPH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NS\AlamerView.resx">
+      <DependentUpon>AlamerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NS\DataTossing.resx">
+      <DependentUpon>DataTossing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NS\DataUph.resx">
+      <DependentUpon>DataUph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NS\DataView.resx">
+      <DependentUpon>DataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NS\FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NS\LogView.resx">
+      <DependentUpon>LogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpDlg.resx">
+      <DependentUpon>OpDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NS\MLogin.resx">
+      <DependentUpon>MLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebugApp.resx">
+      <DependentUpon>DebugApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFIDSys\RFIDForm.resx">
+      <DependentUpon>RFIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RFIDSys\US_RFID.resx">
+      <DependentUpon>US_RFID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Virtual IO\UI_VirtualIO.resx">
+      <DependentUpon>UI_VirtualIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\主界面.png" />
+    <None Include="Resources\硬件信息.png" />
+    <None Include="Resources\信号.png" />
+    <None Include="Resources\通讯.png" />
+    <None Include="Resources\调试.png" />
+    <None Include="Resources\数据.png" />
+    <None Include="Resources\上边3.png" />
+    <None Include="Resources\日志.png" />
+    <None Include="Resources\流程.png" />
+    <None Include="Resources\结构体.png" />
+    <None Include="Resources\工站.png" />
+    <None Include="Resources\登录.png" />
+    <None Include="Resources\剥离.png" />
+    <None Include="Resources\变量.png" />
+    <None Include="Resources\编辑.png" />
+    <None Include="Resources\设备名称.ico" />
+    <None Include="Resources\valid.ico" />
+    <None Include="Resources\unvalid.ico" />
+    <None Include="Resources\Name.ico" />
+    <None Include="Resources\Stop_sel.ico" />
+    <None Include="Resources\Stop.ico" />
+    <None Include="Resources\Start_sel.ico" />
+    <None Include="Resources\Start.ico" />
+    <None Include="Resources\Pause_sel.ico" />
+    <None Include="Resources\Pause.ico" />
+    <None Include="Resources\Paramter_sel.ico" />
+    <None Include="Resources\Pamerter.ico" />
+    <None Include="Resources\Alamer.ico" />
+    <None Include="Resources\Alamer_sel.ico" />
+    <None Include="Resources\Data.ico" />
+    <None Include="Resources\Data_sel.ico" />
+    <None Include="Resources\Alarm.png" />
+    <None Include="Resources\btn.ico" />
+    <Content Include="Resources\EW.ico" />
+    <None Include="Resources\Excel.ico" />
+    <None Include="Resources\Excel_sel.ico" />
+    <None Include="Resources\Home.ico" />
+    <Resource Include="Resources\Home_sel.ico" />
+    <None Include="Resources\Language.ico" />
+    <None Include="Resources\Log.ico" />
+    <None Include="Resources\Log_sel.ico" />
+    <None Include="Resources\Login.ico" />
+    <None Include="Resources\Login_sel.ico" />
+    <None Include="Resources\ew.png" />
+    <None Include="Resources\IO.png" />
+    <Content Include="Resources\Main.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

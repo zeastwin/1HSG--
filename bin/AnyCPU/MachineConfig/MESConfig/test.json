@@ -1,0 +1,23 @@
+"results": [
+                {"result": "pass","test": "glue_open_time","units": "s", "value": "0","upper_limit": "120.000","lower_limit": "0.000"},
+                { "result": "pass", "test": "maximum_outer_diameter", "units": "mm", "value": "25.165", "upper_limit": "26.1", "lower_limit": "25" },
+                { "result": "pass", "test": "minimum_outer_diameter", "units": "mm", "value": "23.309", "upper_limit": "26.1", "lower_limit": "25" },
+                { "result": "pass", "test": "concentricity", "units": "mm", "value": "1", "upper_limit": "0.1", "lower_limit": "0" },
+                { "result": "pass", "test": "maximum_glue_width", "units": "mm", "value": "0", "upper_limit": "1.1", "lower_limit": "0.63" },
+                { "result": "pass", "test": "minimum_glue_width", "units": "mm", "value": "0", "upper_limit": "1.1", "lower_limit": "0.63" },
+                { "result": "pass", "test": "glue_mixing_ratio", "units": "NA", "value": "10.3", "upper_limit": "11", "lower_limit": "9" },
+                { "result": "pass", "test": "glue_releasing_speed", "units": "ul", "value": "623", "upper_limit": "", "lower_limit": "" },
+                { "result": "pass", "test": "wd_assembly_angle", "units": "T", "value": "359.874", "upper_limit": "91", "lower_limit": "89" },
+                { "result": "pass", "test": "wd_angle_offset", "units": "T", "value": "-0.126", "upper_limit": "1", "lower_limit": "-1" },
+                { "result": "pass", "test": "FI2_W1", "units": "mm", "value": "0", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W2", "units": "mm", "value": "0", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W3", "units": "mm", "value": "0", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W4", "units": "mm", "value": "0", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W5", "units": "mm", "value": "0", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_W6", "units": "mm", "value": "0", "upper_limit": "0.120", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI2_wDiff", "units": "mm", "value": "", "upper_limit": "2.000", "lower_limit": "0.000" },
+                { "result": "pass", "test": "FI6_H1", "units": "mm", "value": "0", "upper_limit": "1.050", "lower_limit": "0.650" },
+                { "result": "pass", "test": "FI6_H2", "units": "mm", "value": "0", "upper_limit": "1.050", "lower_limit": "0.650" },
+                { "result": "pass", "test": "FI6_H3", "units": "mm", "value": "0", "upper_limit": "1.050", "lower_limit": "0.650" },
+                { "result": "pass", "test": "FI6_H4", "units": "mm", "value": "0", "upper_limit": "1.050", "lower_limit": "0.650" }
+            ]

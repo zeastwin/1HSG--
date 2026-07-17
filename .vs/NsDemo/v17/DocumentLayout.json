@@ -1,0 +1,193 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\corework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\corework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|e:\\desktop\\zhoudc\\1hsg\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\product\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\product\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|e:\\desktop\\zhoudc\\1hsg\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\opdlg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\opdlg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\opdlg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\opdlg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\debugapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\debugapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\iddevice\\ui_fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\iddevice\\ui_fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\iddevice\\zkfinger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\iddevice\\zkfinger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\iddevice\\ui_fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\iddevice\\ui_fingerprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\nsdemo\\debugapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05B81A89-423E-40E4-AD75-3D409B1C8724}|NsDemo\\NsDemo.csproj|solutionrelative:nsdemo\\debugapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Products.cs",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\Product\\Products.cs",
+              "RelativeDocumentMoniker": "NsDemo\\Product\\Products.cs",
+              "ToolTip": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\Product\\Products.cs",
+              "RelativeToolTip": "NsDemo\\Product\\Products.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAQwLEAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T07:45:51.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormMain.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\FormMain.cs",
+              "RelativeDocumentMoniker": "NsDemo\\FormMain.cs",
+              "ToolTip": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\FormMain.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "NsDemo\\FormMain.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T07:20:23.615Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DebugApp.cs",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\DebugApp.cs",
+              "RelativeDocumentMoniker": "NsDemo\\DebugApp.cs",
+              "ToolTip": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\DebugApp.cs",
+              "RelativeToolTip": "NsDemo\\DebugApp.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAUwB0AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T03:42:26.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DebugApp.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\DebugApp.cs",
+              "RelativeDocumentMoniker": "NsDemo\\DebugApp.cs",
+              "ToolTip": "C:\\Users\\EW\\Desktop\\HSG\u4E0B\u6599\u673A\u8054\u4E300323\\NsDemo\\DebugApp.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T07:45:04.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OpDlg.cs",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\OpDlg.cs",
+              "RelativeDocumentMoniker": "NsDemo\\OpDlg.cs",
+              "ToolTip": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\OpDlg.cs",
+              "RelativeToolTip": "NsDemo\\OpDlg.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAIwIQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T08:50:34.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormMain.cs",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\FormMain.cs",
+              "RelativeDocumentMoniker": "NsDemo\\FormMain.cs",
+              "ToolTip": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\FormMain.cs",
+              "RelativeToolTip": "NsDemo\\FormMain.cs",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAAwEUAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T08:50:34.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OpDlg.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\OpDlg.cs",
+              "RelativeDocumentMoniker": "NsDemo\\OpDlg.cs",
+              "ToolTip": "C:\\Users\\EW\\Desktop\\HSG\u4E0B\u6599\u673A\u8054\u4E300323\\NsDemo\\OpDlg.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T08:43:50.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CoreWork.cs",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\CoreWork.cs",
+              "RelativeDocumentMoniker": "NsDemo\\CoreWork.cs",
+              "ToolTip": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\CoreWork.cs",
+              "RelativeToolTip": "NsDemo\\CoreWork.cs",
+              "ViewState": "AQIAAAMBAAAAAAAAAAAQwBwBAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T08:50:34.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UI_FingerPrint.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\IdDevice\\UI_FingerPrint.cs",
+              "RelativeDocumentMoniker": "NsDemo\\IdDevice\\UI_FingerPrint.cs",
+              "ToolTip": "C:\\Users\\EW\\Desktop\\HSG\u4E0B\u6599\u673A\u8054\u4E300323\\NsDemo\\IdDevice\\UI_FingerPrint.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T07:43:21.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UI_FingerPrint.cs",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\IdDevice\\UI_FingerPrint.cs",
+              "RelativeDocumentMoniker": "NsDemo\\IdDevice\\UI_FingerPrint.cs",
+              "ToolTip": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\IdDevice\\UI_FingerPrint.cs",
+              "RelativeToolTip": "NsDemo\\IdDevice\\UI_FingerPrint.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAUwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T07:53:02.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ZKFinger.cs",
+              "DocumentMoniker": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\IdDevice\\ZKFinger.cs",
+              "RelativeDocumentMoniker": "NsDemo\\IdDevice\\ZKFinger.cs",
+              "ToolTip": "E:\\Desktop\\Zhoudc\\1HSG\u4E0B\u6599\u673A\u8054\u4E300616\\NsDemo\\IdDevice\\ZKFinger.cs",
+              "RelativeToolTip": "NsDemo\\IdDevice\\ZKFinger.cs",
+              "ViewState": "AQIAAHcBAAAAAAAAAAAWwIcBAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T07:58:22.509Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

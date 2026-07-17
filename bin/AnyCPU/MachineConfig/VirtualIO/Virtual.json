@@ -1,0 +1,184 @@
+{
+  "CardID": "HSG下料机",
+  "_array_input": [
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入00",
+      "IO_Index": 0
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入01",
+      "IO_Index": 1
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入02",
+      "IO_Index": 2
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入03",
+      "IO_Index": 3
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入04",
+      "IO_Index": 4
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入05",
+      "IO_Index": 5
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入06",
+      "IO_Index": 6
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入07",
+      "IO_Index": 7
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入08",
+      "IO_Index": 8
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入09",
+      "IO_Index": 9
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入10",
+      "IO_Index": 10
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入11",
+      "IO_Index": 11
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入12",
+      "IO_Index": 12
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入13",
+      "IO_Index": 13
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入14",
+      "IO_Index": 14
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输入15",
+      "IO_Index": 15
+    }
+  ],
+  "_array_output": [
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出00",
+      "IO_Index": 0
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出01",
+      "IO_Index": 1
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出02",
+      "IO_Index": 2
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出03",
+      "IO_Index": 3
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出04",
+      "IO_Index": 4
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出05",
+      "IO_Index": 5
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出06",
+      "IO_Index": 6
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出07",
+      "IO_Index": 7
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出08",
+      "IO_Index": 8
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出09",
+      "IO_Index": 9
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出10",
+      "IO_Index": 10
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出11",
+      "IO_Index": 11
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出12",
+      "IO_Index": 12
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出13",
+      "IO_Index": 13
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出14",
+      "IO_Index": 14
+    },
+    {
+      "IO_Status": 0,
+      "IO_Name": "输出15",
+      "IO_Index": 15
+    }
+  ],
+  "_array_matching_model": [
+    {
+      "CardID": "盖板机",
+      "Output_Index": 13,
+      "Input_Index": 13
+    },
+    {
+      "CardID": "盖板机",
+      "Output_Index": 14,
+      "Input_Index": 14
+    },
+    {
+      "CardID": "盖板机",
+      "Output_Index": 15,
+      "Input_Index": 15
+    }
+  ]
+}

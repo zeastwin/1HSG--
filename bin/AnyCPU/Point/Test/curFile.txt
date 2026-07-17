@@ -1,0 +1,2 @@
+[note]
+curPointFile=Test

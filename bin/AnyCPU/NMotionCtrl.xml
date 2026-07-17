@@ -1,0 +1,1540 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NMotionCtrl</name>
+    </assembly>
+    <members>
+        <member name="T:NMotionCtrl.SSpeed">
+            <summary>
+            工站速度0.001--100
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SSpeed.jointSpeed">
+            <summary>
+            关节速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SSpeed.globalSpeed">
+            <summary>
+            工站全局速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SSpeed.moveSpeed">
+            <summary>
+            执行插补运动时的默认速度, 和上次设置的速度相关
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.NSpeed">
+            <summary>
+            速度结构体
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.NSpeed.vel">
+            <summary>
+            速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.NSpeed.acc">
+            <summary>
+            加速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.NSpeed.dec">
+            <summary>
+            减速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.NSpeed.endvel">
+            <summary>
+            末速度，用于插补
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.StationStatus">
+            <summary>
+            工站状态
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationStatus.SysStatus">
+            <summary>
+            运动系统状态
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationStatus.StStatus">
+            <summary>
+            工站状态
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationStatus.AxisStatus">
+            <summary>
+            各轴状态
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationStatus.enable">
+            <summary>
+            使能状态
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationStatus.pos">
+            <summary>
+            当前点
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationStatus.WanrAxis">
+            <summary>
+            异常的轴
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.CmpParam">
+             <summary>
+            比较器信息类
+             </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.cmpID">
+            <summary>
+            比较器号
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.iIs2D">
+            <summary>
+            true 二维，false 一维
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.axisID1">
+            <summary>
+            轴一索引
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.axisID2">
+            <summary>
+            轴二索引
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.error">
+            <summary>
+            误差带
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.cmpLogic">
+            <summary>
+            设置输出IO电平
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.time">
+            <summary>
+            输出io电平维持时间
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.ioport">
+            <summary>
+            输出io
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.low">
+            <summary>
+            true 低速， false 高速    
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.cmd">
+            <summary>
+            命令，1是启动，2是停止，其他是添加点位
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.pos">
+            <summary>
+            比较位置
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.dir">
+            <summary>
+            比较模式
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.CmpParam.setPam">
+            <summary>
+            0设置参数 1添加点 2启动 3停止
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.SafeSpace">
+            <summary>
+            安全空间
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SafeSpace.limit">
+            <summary>
+            空间限制参数
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.StationInfo">
+            <summary>
+            工站信息
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.name">
+            <summary>
+            工站名字
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.id">
+            <summary>
+            工站索引
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.type">
+            <summary>
+            工站类型 0:轴工站 1：机器人工站
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.axisCtn">
+            <summary>
+            轴数量
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.beta">
+            <summary>
+            精度要求
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.homeOrder">
+            <summary>
+            回原点次序
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.jumpOrder">
+            <summary>
+            jump运动轴次序
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.jumpPos">
+            <summary>
+            jump运动位置设定
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.axisInfo">
+            <summary>
+            轴信息{{卡号，轴号}，.....,{卡号，轴号}}
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.Robotipport">
+            <summary>
+            机器人ip地址和端口号
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.Hostipport">
+            <summary>
+            软件ip地址和端口号
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.commutype">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.pauseName">
+            <summary>
+            暂停信号名称
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.cancelPauseName">
+            <summary>
+            暂停取消信号名称
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.rgName">
+            <summary>
+            暂停变量
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.safeProcID">
+            <summary>
+            安全检查流程号
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.usePause">
+            <summary>
+            是否启用暂停检查
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.pointFromRbt">
+            <summary>
+            默认从机器人加载点位
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.remotemode">
+            <summary>
+            是否是远程模式登陆
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.remotObjectID">
+             <summary>
+            remotObjectID
+             </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.fiveInfo">
+            <summary>
+            五轴联动配置
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.coorID">
+            <summary>
+            指定插补坐标系
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.lookaheadEN">
+            <summary>
+            前瞻是否使能
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.pathError">
+            <summary>
+            前瞻允许误差
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.lookMultipleAcc">
+            <summary>
+            前瞻加速度倍数
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.maxVel">
+            <summary>
+            插补系最大速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.maxAcc">
+            <summary>
+            插补系最大加速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StationInfo.maxDec">
+            <summary>
+            插补系最大减速度
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.StationInfo.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.FiveAxisInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.machineType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.card">
+            <summary>
+            卡ID
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.coor">
+            <summary>
+            坐标系
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.toollen">
+            <summary>
+            工具坐标
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.dir">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.rotate_speed">
+            <summary>
+            选旋转速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.rotate_acc">
+            <summary>
+            旋转加速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.offset_0">
+            <summary>
+            旋转中心偏差
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.offset_1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.initPos">
+            <summary>
+            摆平位置
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.FiveAxisInfo.path">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.FiveAxisInfo.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.FiveAxisInfo.Load">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.FiveAxisInfo.SaveToFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.NPoint.copy">
+            <summary>
+            把当前点位复制一份副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.NPoint.copy(NMotionCtrl.NPoint)">
+            <summary>
+            把源点位复制到当前点位
+            </summary>
+            <param name="srcNpt"></param>
+        </member>
+        <member name="M:NMotionCtrl.NPoint.copypos(NMotionCtrl.NPoint)">
+            <summary>
+            只复制坐标数据，其他属性不变，用于示教点位
+            </summary>
+            <param name="srcNpt">源数据</param>
+        </member>
+        <member name="F:NMotionCtrl.IOInfo.cardtype">
+            <summary>
+            卡类型:0本卡，1扩展卡
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOInfo.exindex">
+            <summary>
+            模块号 (节点ID)
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOInfo.index">
+            <summary>
+            //索引号:io编号
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOInfo.type">
+            <summary>
+            类型0输入1输出
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOInfo.userType">
+            <summary>
+            应用类型:启动，复位。。。
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.Imc100">
+            <summary>
+            汇川机器人控制类
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.Imc100.m_iConnect">
+            <summary>
+            rbt连上为2，连接中为1，未连接为0
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.Imc100.JogFunc(System.Int16,System.Int16)">
+            <summary>
+            汇川Jog运动
+            </summary>
+            <param name="axis">轴号</param>
+            <param name="cmd">寸动距离</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.Imc100.InchMode(System.Int16,System.Double)">
+            <summary>
+            寸动模式
+            </summary>
+            <param name="axis">轴号</param>
+            <param name="offset">寸动距离</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.Imc100.CheckInPoint(System.Int32,System.Boolean[],System.Double[])">
+            <summary>
+            判断运动是否到位,待测试
+            </summary>
+            <param name="pIndex">点位</param>
+            <param name="enable">禁用列表</param>
+            <param name="offset">精度列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:NMotionCtrl.IStation">
+            <summary>
+            机器人，工站基类
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.IOType">
+            <summary>
+            IO类型
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOType.LimitP">
+            <summary>
+            正限位
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOType.LimitN">
+            <summary>
+            负限位
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOType.Alarm">
+            <summary>
+            报警
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOType.IHome">
+            <summary>
+            原点
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOType.GPI">
+            <summary>
+            通用输入
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.IOType.GPO">
+            <summary>
+            通用输出
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.SpeedType">
+            <summary>
+            速度类型
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SpeedType.Global">
+            <summary>
+            全局速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SpeedType.Joint">
+            <summary>
+            Joint速度
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SpeedType.Move">
+            <summary>
+            插补速度
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.MoveModle">
+            <summary>
+            工站运动模式
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MoveModle.GO">
+            <summary>
+            go运动模式
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MoveModle.MOVE">
+            <summary>
+            插补运动模式
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MoveModle.JOG">
+            <summary>
+            连续运动
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.AxisMoveModle">
+            <summary>
+            轴运动模式
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.AxisMoveModle.Abs">
+            <summary>
+            相对与原点位置
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.AxisMoveModle.Rel">
+            <summary>
+            相对与当前位置
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.AxisMoveModle.RelByEncode">
+            <summary>        
+            相对运动，通过获取编码器位置叠加
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.PosType">
+            <summary>
+            位置获取方式
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.PosType.Prf">
+            <summary>
+            规划位置
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.PosType.Enc">
+            <summary>
+            编码器位置
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.StGetType">
+            <summary>
+            状态获取类别
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StGetType.System">
+            <summary>
+            一般的轴状态检测
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StGetType.PosCheck">
+            <summary>
+            到位检测
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StGetType.SafeGet">
+            <summary>
+            获取当前使用的安全空间号
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StGetType.UserSta">
+            <summary>
+            应用操作状态
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StGetType.AxisEnable">
+            <summary>
+            轴使能
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.StSetType">
+            <summary>
+            工站操作类别
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.ClearPos">
+            <summary>
+            位置清零
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.AxisOn">
+            <summary>
+            使能开
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.AxisOff">
+            <summary>
+            使能关
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.Stop">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.ClearStatus">
+            <summary>
+            清除状态
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.Pause">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.GoOn">
+            <summary>
+            继续
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.EStop">
+            <summary>
+            急停
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.GetAxisEnable">
+            <summary>
+            获取轴使能状态
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.LoadFiveInfo">
+            <summary>
+            加载5轴参数
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.StSetType.SetAbsEncoderZero">
+            <summary>
+            总线卡绝对值编码器清零
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.MCErrorCode">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.FileError">
+            <summary>
+            文件类错误
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.ParamError">
+            <summary>
+            参数错误
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.CardError">
+            <summary>
+            卡错误
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.NotHome">
+            <summary>
+            未回原
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.BaseOut">
+            <summary>
+            基类未处理
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.NO_CONNECT">
+            <summary>
+            未连接
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.SEND_ERR">
+            <summary>
+            发送错误
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.RECV_ERR">
+            <summary>
+            接收错误
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.LOADPT_ERR">
+            <summary>
+            加载点位错误
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.IsMoving">
+            <summary>
+            移动中
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.BaseFuncError">
+            <summary>
+            底层函数错误
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.Timeout">
+            <summary>
+            超时
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.MCErrorCode.Success">
+            <summary>
+            无错误
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.SAVE_CFG_TYPE">
+            <summary>
+            保存配置类型
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SAVE_CFG_TYPE.CFG_STATION">
+            <summary>
+            工站配置
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.SAVE_CFG_TYPE.CFG_IO">
+            <summary>
+            io配置
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.EM_IOUserType">
+            <summary>
+            IO应用类型
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.EM_IOUserType.通用">
+            <summary>
+            通用
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.EM_IOUserType.急停">
+            <summary>
+            急停
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.EM_IOUserType.复位">
+            <summary>
+            复位
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.EM_IOUserType.启动">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.EM_IOUserType.暂停">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.EM_IOUserType.停止">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="F:NMotionCtrl.EM_IOUserType.刹车">
+            <summary>
+            刹车
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.MotionCtrl">
+            <summary>
+            运动控制器
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetInstance">
+            <summary>
+            获取运动控制器实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.Init">
+            <summary>
+            初始化控制器\加载配置文件、工站点位、IO
+            <returns></returns>
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.Release">
+            <summary>
+            关闭控制器、释放相关资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.BreakCtrl(System.Int16)">
+            <summary>
+            刹车操作
+            </summary>
+            <param name="sts">0->关刹车, 1->开刹车</param>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.Reset(System.Int16)">
+            <summary>
+            重置控制器/控制卡, 清除报警
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SetSpeed(System.Int16,System.Double,System.Double,System.Double,System.Int16,NMotionCtrl.SpeedType)">
+            <summary>
+            设置工站/关节速度
+            </summary>
+            <param name="sID"></param>
+            <param name="vel">速度</param>
+            <param name="acc">加速度</param>
+            <param name="dec">减速度</param>
+            <param name="axis">轴索引，-1为工站</param>
+            <param name="type">设置整体速度类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ChangeSpeed(System.Int16,System.Double,System.Double,System.Double,System.Int16)">
+            <summary>
+            在线修改速度
+            </summary>
+            <param name="sID"></param>
+            <param name="vel"></param>
+            <param name="acc"></param>
+            <param name="dec"></param>
+            <param name="axis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetSpeed(System.Int16,NMotionCtrl.SSpeed@)">
+            <summary>
+            获取工站速度
+            </summary>
+            <param name="sID"></param>
+            <param name="speed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.Home(System.Int16,System.Int16,System.Boolean,System.Boolean)">
+            <summary>
+            关节回原
+            </summary>
+            <param name="sID">工站号</param>
+            <param name="axis">轴号,-1则工站回原</param>
+            <param name="wait">是否等待</param>
+            <param name="group">若为true则关节回原计入工站回原完成标志 工站回原时则单轴回过的轴不回</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetAxisStopReason(System.Int16,System.Int32[])">
+            <summary>
+            获取轴停止原因
+            </summary>
+            <param name="sID">工站号</param>
+            <param name="reason">轴停止原因</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.CheckInPoint(System.Int16,System.Int32,System.Boolean[],System.Double[])">
+            <summary>
+            检查是否到位
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="pIndex">点索引</param>
+            <param name="enable">禁用轴列表</param>
+            <param name="offset">轴误差范围</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetStatus(System.Int16)">
+            <summary>
+            获取工站状态
+            </summary>
+            <param name="sID"></param>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SetStatus(System.Int16,NMotionCtrl.StSetType,System.Int64,System.Int16)">
+            <summary>
+            设置状态：使能打开关闭、位置清零、停止、暂停、继续、设置安全空间
+            </summary>
+            <param name="sID"></param>
+            <param name="cmd">设置项</param>
+            <param name="param">参数值</param>
+            <param name="axis">要操作轴号，默认对整个工站</param>       
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ToPoint(System.Int16,System.Int32,NMotionCtrl.MoveModle,System.Int32,System.Boolean[],System.Int16)">
+            <summary>
+            运动到指定点位
+            </summary>
+            <param name="sID"></param>
+            <param name="pIndex">点位索引</param>
+            <param name="modle">运动模式,默认go</param>
+            <param name="basePIndex">参考点位索引</param>
+            <param name="enable">轴禁用列表</param>
+            <param name="tool">工具坐标号，默认工具0</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ToPoint(System.Int16,System.String,NMotionCtrl.MoveModle,System.Boolean[],System.Int16)">
+            <summary>
+            运动到指定点位
+            </summary>
+            <param name="sID"></param>
+            <param name="pName">点位名字</param>
+            <param name="modle">运动模式,默认go</param>
+            <param name="enable">轴禁用列表</param>
+            <param name="tool">工具坐标号,默认工具0</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ToPoint(System.Int16,NMotionCtrl.NPoint,NMotionCtrl.MoveModle,System.Boolean[],System.Int16,System.Int16)">
+            <summary>
+            传入点数据走点
+            </summary>
+            <param name="sID"></param>
+            <param name="pt">点数据</param>
+            <param name="modle">运动模式</param>
+            <param name="enable">轴禁用列表</param>
+            <param name="tool">工具号</param>
+            <param name="calib">标定号</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.MoveOffset(System.Int16,System.Int32,System.Double[],NMotionCtrl.MoveModle)">
+            <summary>
+            走偏移量
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="basePt">参考点</param>
+            <param name="offsetList">偏移量列表</param>
+            <param name="modle">运动模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.AddCPLinePoint(System.Int16,System.Int32,System.Int16,NMotionCtrl.NSpeed,System.Double[])">
+            <summary>
+            添加连续直线运动点
+            </summary>
+            <param name="sID"></param>
+            <param name="pIndex"></param>
+            <param name="cpType"> 0普通插补 1五轴联动></param>
+            <param name="mSpeed">单段速度, 只在当前指令下有效, 如果为空则不设置, 使用 SetSpeed 函数在上次设置的速度</param>
+            <param name="offsetList">点位偏移</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.AddCPArcPoint(System.Int16,System.Int32,System.Int32,System.Int32,System.Int16,NMotionCtrl.NSpeed,System.Double[])">
+            <summary>
+            添加圆弧运动点
+            </summary>
+            <param name="sID"></param>
+            <param name="pIndexA">三点确定圆弧的A点</param>
+            <param name="pIndexB"></param>
+            <param name="pIndexC"></param>
+            <param name="cpType"> 0普通插补 1五轴联动></param>
+            <param name="mSpeed">单段速度, 只在当前指令下有效, 如果为空则不设置, 使用 SetSpeed 函数在上次设置的速度</param>
+            <param name="offsetList">点位偏移</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.AddCPArcPoint2(System.Int16,System.Int32,System.Int32,System.Double,System.Int32,System.Boolean,System.Boolean,System.Int16,NMotionCtrl.NSpeed,System.Double[])">
+            <summary>
+            添加圆弧2
+            </summary>
+            <param name="sID"></param>
+            <param name="objPoint">目标点</param>
+            <param name="centerPoint">圆心</param>
+            <param name="radius">半径</param>
+            <param name="circle">螺旋圈数</param>
+            <param name="close">螺旋是否闭合</param>
+            <param name="dir">方向</param>
+            <param name="cpType"> 0普通插补 1五轴联动></param>
+            <param name="mSpeed">单段速度, 只在当前指令下有效, 如果为空则不设置, 使用 SetSpeed 函数在上次设置的速度</param>
+            <param name="offsetList">点位偏移</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.AddCPIO(System.Int16,System.String,System.Boolean,System.Double,System.Int16,System.Double,System.Int16)">
+            <summary>
+            增加连续插补IO
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="ioName">io名称</param>
+            <param name="onOff">true为开，false为关</param>
+            <param name="val">参数, 时间模式代表时间(单位:s), 距离模式代表距离(单位:unit)</param>
+            <param name="type">操作类型 起点滞后输出；终点提前输出；终点滞后输出；立即输出；插补延时</param>
+            <param name="backTime">电平翻转时间(单位:s)</param>
+            <param name="modle">模式 0：时间模式； 1：距离模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.AddAxisFollow(System.Int16,System.Int16,System.Double,System.Int16)">
+            <summary>
+            添加轴跟随运动
+            </summary>
+            <param name="sID">工站</param>
+            <param name="axis">跟随轴</param>
+            <param name="dist">跟随距离</param>
+            <param name="follow_mode">跟随模式 0 表示相对位置跟随模式, 1 表示轴跟随插补速度的模式</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.StartCPMove(System.Int16)">
+            <summary>
+            启动连续运动
+            </summary>
+            <param name="sID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SetCmpParam(System.Int16,NMotionCtrl.CmpParam)">
+            <summary>
+             设置比较器参数
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="cmpP">比较器信息结构体</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.AddCmpPos(System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Boolean)">
+            <summary>
+            插入比较位置
+            </summary>
+            <param name="sID"></param>
+            <param name="pt">比较点</param>
+            <param name="axis1">比较轴号1</param>
+            <param name="axis2">比较轴号2</param>
+            <param name="cmd">0 添加点 1-start 2-stop</param>
+            <param name="isClear">是否清除之前比较数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ChangeTargePos(System.Int16,System.Int32)">
+            <summary>
+            在线修改运动目标位置
+            </summary>
+            <param name="sID"></param>
+            <param name="targePt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.WaitMoveFinish(System.Int16,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            等待运动结束
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="isHome">是否是回原</param>
+            <param name="axis">轴索引</param>
+            <param name="timeout">超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.AxisMotion(System.Int16,System.Int16,System.Double,NMotionCtrl.AxisMoveModle,System.Int16)">
+            <summary>
+            轴运动
+            </summary>
+            <param name="sID"></param>
+            <param name="axis">轴号</param>
+            <param name="pos">运动量</param>
+            <param name="modle">运动模式</param>
+            <param name="tool">工具坐标号</param>
+            <returns></returns>   
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.CreateTool(System.Int16,System.Int16,System.Double,System.Double,System.Double,System.Int16)">
+            <summary>
+            创建工具坐标,机器人用
+            </summary>
+            <param name="sID"></param>
+            <param name="tool"></param>
+            <param name="x">如果是机器人标定 则是图像坐标</param>
+            <param name="y"></param>
+            <param name="u"></param>
+            <param name="calib">标定号 如果是机器人自己标定</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ModifTool(System.Int16,NMotionCtrl.NPoint,System.Int16)">
+            <summary>
+            修改/设置工具偏移
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="offset">offset[6]六个轴的偏移</param>
+            <param name="index">工具坐标系编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SetTool(System.Int16,System.Int16)">
+            <summary>
+            设置当前要使用的坐标系
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="index">0表示不用工具坐标系</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SaveToolInfo(System.Int16,System.Int32,NMotionCtrl.StationToolInfo)">
+            <summary>
+            轴工站保存自身工具信息
+            </summary>
+            <param name="sID"></param>
+            <param name="index"></param>
+            <param name="sti"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetToolInfo(System.Int16,System.Int32)">
+            <summary>
+            保存工具坐标
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="index">工具坐标索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetToolCount(System.Int16)">
+            <summary>
+            获取工具坐标个数
+            </summary>
+            <param name="sID">工站ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.WordToTool(System.Int16,System.Int16,NMotionCtrl.NPoint,NMotionCtrl.NPoint@)">
+            <summary>
+            世界坐标转工具坐标
+            </summary>
+            <param name="sID"></param>
+            <param name="index"></param>
+            <param name="word"></param>
+            <param name="toolPt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GoCCDPoint(System.Int16,System.Int16,System.Double,System.Double,System.Double,System.Int16)">
+            <summary>
+            走视觉拍到的坐标
+            </summary>
+            <param name="sID"></param>
+            <param name="tool"></param>
+            <param name="x">如果是机器人标定 则是图像坐标</param>
+            <param name="y"></param>
+            <param name="u"></param>
+            <param name="calib">标定号 如果是机器人自己标定</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.Calibration(System.Int16,System.Int16,System.Int32,System.Int16,System.Int16)">
+            <summary>
+            工站标定
+            </summary>
+            <param name="sID"></param>
+            <param name="calibID">标定号</param>
+            <param name="beginPoint">点列表起点</param>
+            <param name="pointCount">用到的点数量</param>
+            <param name="type">标定类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.CreatPallet(System.Int16,System.Int16,System.Int16,System.Int16,System.Int32[])">
+            <summary>
+            创建料盘
+            </summary>
+            <param name="sID"></param>
+            <param name="palletID">料盘号</param>
+            <param name="col">列数</param>
+            <param name="row">行数</param>
+            <param name="ptList">料盘点位</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.DelPallet(System.Int16,System.Int16)">
+            <summary>
+            删除料盘
+            </summary>
+            <param name="sID"></param>
+            <param name="palletID">料盘号</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GoPalletPos(System.Int16,System.Int16,System.Int32,System.Boolean,System.Int16[])">
+            <summary>
+            走到料盘上的指定位置
+            </summary>
+            <param name="sID"></param>
+            <param name="palletID">料盘号</param>
+            <param name="pos">料盘位置</param>
+            <param name="dir">方向</param>
+            <param name="axisList">  [z,u,v,w]的轴号；不设定移动x,y再走到料盘点;
+            否则移动x,y及其axis指定的轴列表，再走到料盘点,比如 axis {0,1,0,0} 表示x,y,u先动，再动剩下的轴</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetPalletPos(System.Int16,System.Int16,System.Int32,System.Boolean,NMotionCtrl.NPoint@)">
+            <summary>
+            根据索引获取料盘点
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="palletID">料盘号</param>
+            <param name="pos">料盘位置</param>
+            <param name="dir">方向</param>
+            <param name="ptTemp">获取到的点</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SendCmd(System.Int16,System.String)">
+            <summary>
+            发送自定义命令，扩展用
+            </summary>
+            <param name="sID"></param>
+            <param name="cmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ReceCmd(System.Int16,System.String@)">
+            <summary>
+            接受工站发回数据
+            </summary>
+            <param name="sID"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetPoint(System.Int16,NMotionCtrl.NPoint@,System.Int16,System.Int16)">
+            <summary>
+            获取点信息:
+            1.名字不为空，则获取对应名字的点
+            2.名字为空，点索引为-1获取当前位置  
+            </summary>
+            <param name="sID"></param>
+            <param name="pt">点信息接收变量</param>
+            <param name="tool">工作坐标号，默认工具0坐标下的信息</param>
+            <param name="calib">标定号，默认没有标定转化</param>
+            <returns>1表示点位表有更新</returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SetPoint(System.Int16,NMotionCtrl.NPoint,System.Boolean,System.Boolean)">
+            <summary>
+            设置/修改/示教点信息
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="pt">点位</param>
+            <param name="isTech">是否为示教</param>
+            <param name="isSaveFile">是否保存到文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.AddSafeSpace(System.Int16,NMotionCtrl.SafeSpace)">
+            <summary>
+            添加安全空间
+            </summary>
+            <param name="sID"></param>
+            <param name="sSpace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.DelSafeSpace(System.Int16,System.Int16)">
+            <summary>
+            删除安全空间
+            </summary>
+            <param name="sID"></param>
+            <param name="SSID">安全空间索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ReadIO(System.Int16,System.Int16,NMotionCtrl.IOType,System.Int16,System.Int16)">
+            <summary>
+            io读取
+            </summary>
+            <param name="cardID">卡号</param>
+            <param name="index">io索引号</param>        
+            <param name="iotype">io类型</param>
+            <param name="sense">有效电平1高电平有效，0低电平有效</param>
+            <param name="modleID">扩展模块号</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ReadIO(System.String)">
+            <summary>
+            读取指定名字的io
+            </summary>
+            <param name="ioName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ReadSomeIO(System.Int16,System.Int64@,NMotionCtrl.IOType,System.Int16,System.Int16)">
+            <summary>
+            一次读取多个IO
+            </summary>
+            <param name="cardID"></param>
+            <param name="lvalue"></param>
+            <param name="iotype"></param>
+            <param name="sense"></param>
+            <param name="modleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ReadAdc(System.Int16,System.Int16,System.Double@,System.Int16)">
+            <summary>
+            读取模拟量
+            </summary>
+            <param name="cardID">卡号</param>
+            <param name="index">通道号</param>
+            <param name="dValue">输出值</param>
+            <param name="externid">扩展卡ID，-1为本卡</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.WriteIO(System.Int16,System.Int16,System.Int16,System.Int16,System.Int16)">
+            <summary>
+            写入io
+            </summary>
+            <param name="cardID">卡索引</param>
+            <param name="index">io索引</param>
+            <param name="val">写入的值</param>
+            <param name="modleID">扩展模块号</param>
+            <param name="excardid">扩展卡ID，-1为本卡</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.WriteIO(System.String,System.Int16)">
+            <summary>
+            写入io
+            </summary>
+            <param name="ioName">io名字</param>
+            <param name="val">写入值</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetAxisName(System.Int16,System.Int16,System.String@)">
+            <summary>
+            UI交互,获取工站名称
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="axis">轴索引</param>
+            <param name="name">获取的轴名称</param>
+            <returns>0为成功，其他为失败</returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetAxisIndex(System.Int16,System.String)">
+            <summary>
+            获取工站轴索引
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetPointList(System.Int16)">
+            <summary>
+            获取指定工站的点位列表
+            </summary>
+            <param name="sID">工站ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetPtIndex(System.Int16,System.String)">
+            <summary>
+            根据点位名称获取点位索引
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="name">点位名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetPtNameByIndex(System.Int16,System.Int32)">
+            <summary>
+            根据点位索引获取点位名称
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="index">点位索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetAxisNameByCard(System.Int16,System.Int16,System.String@)">
+            <summary>
+            根据卡索引获取轴名称
+            </summary>
+            <param name="cID">卡ID</param>
+            <param name="axisId">轴索引</param>
+            <param name="axisname">获取到的轴名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetAxisIndexByName(System.Int16,System.String)">
+            <summary>
+            根据轴名称获取轴索引
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="name">轴名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetPointGroup(System.Int16)">
+            <summary>
+            获取指定工站的点位组别
+            </summary>
+            <param name="sID">工站ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.PointGroupCtr(System.Int16,System.Int16,System.Int16,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sID"></param>
+            <param name="group"></param>
+            <param name="type">0增加 1删除 2修改 3隐藏 4显示 5禁用 6启用 </param>
+            <param name="name"></param>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.LoadPoint(System.Int16,System.String,System.Boolean)">
+            <summary>
+            从文件加载点
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="fileName">文件名称</param>
+            <param name="fromRbt">是否机器人控制器加载</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ModifyPointFileName(System.Int16,System.String,System.String)">
+            <summary>
+            更改点位名称
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="oldfileName">保存文件旧名称</param>
+            <param name="newfileName">保存文件新名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SavePoint(System.Int16,System.String)">
+            <summary>
+            保存点到文件
+            </summary>
+            <param name="sID"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetPointFiles(System.Int16,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            保存点到文件
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="files">文件列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.UpdateAxisCount">
+            <summary>
+            更新轴数量
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetStationAxisCnt(System.Int16)">
+            <summary>
+            获取工站轴数量
+            </summary>
+            <param name="sID">工站ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.SaveConfig(NMotionCtrl.SAVE_CFG_TYPE)">
+            <summary>
+            保存工站和IO配置文件
+            </summary>
+            <param name="savetype"></param>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.PointEdit(System.Int16,System.Int32,System.Int32)">
+            <summary>
+            增加删除点位
+            </summary>
+            <param name="sID"></param>
+            <param name="index"></param>
+            <param name="type">0插入点位 1删除点位</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.PointCount(System.Int16)">
+            <summary>
+            获取工站的点位数量
+            </summary>
+            <param name="sID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.GetCurPointFileName(System.Int16)">
+            <summary>
+            获取指定工站当前的点位文件名
+            </summary>
+            <param name="sID">工站ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.PointFileCtr(System.Int16,System.String,System.String,System.Boolean)">
+            <summary>
+            工站点位文件操作
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="newfileName"></param>
+            <param name="basefileName"></param>
+            <param name="isDel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.ClearCPList(System.Int16)">
+            <summary>
+            清除轨迹列表
+            </summary>
+            <param name="sID"></param>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.DisablePause(System.Int16,System.Boolean)">
+            <summary>
+            禁用工站暂停
+            </summary>
+            <param name="sID">工站ID</param>
+            <param name="bPause">禁用标志</param>
+        </member>
+        <member name="P:NMotionCtrl.MotionCtrl.IOList">
+            <summary>
+            io名称表
+            </summary>
+        </member>
+        <member name="P:NMotionCtrl.MotionCtrl.StationInfo">
+            <summary>
+            工站信息
+            </summary>
+        </member>
+        <member name="P:NMotionCtrl.MotionCtrl.IOInfo">
+            <summary>
+            所有IO信息，没张主卡，扩展卡上个有多少个io
+            </summary>
+        </member>
+        <member name="P:NMotionCtrl.MotionCtrl.AxisCount">
+            <summary>
+            每张卡上的轴数量
+            </summary>
+        </member>
+        <member name="P:NMotionCtrl.MotionCtrl.CardCount">
+            <summary>
+            卡数量
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.MotionCtrl.CollSystemGPI">
+            <summary>
+            处理系统IO, 并回调
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.Robot">
+            <summary>
+            机器人控制类
+            </summary>
+        </member>
+        <member name="T:NMotionCtrl.Station">
+            <summary>
+            工站类，实现多个轴的类机器人管理
+            </summary>
+        </member>
+        <member name="M:NMotionCtrl.Station.CheckInPoint(System.Int32,System.Boolean[],System.Double[])">
+            <summary>
+            判断运动是否到位
+            </summary>
+            <param name="pIndex">点位</param>
+            <param name="enable">禁用列表</param>
+            <param name="offset">精度列表</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
