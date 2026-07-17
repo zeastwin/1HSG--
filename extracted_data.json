@@ -1,0 +1,1930 @@
+{
+  "Metadata": {
+    "SourceProject": "JS_ICT_NPI_LAX_XXXX(设备名字)_S1_V3.0_20260701",
+    "ExtractedAt": "2026-07-17 11:43:33",
+    "ExtractorVersion": "1.0",
+    "SourceRootPath": "F:\\项目\\1HSG下料"
+  },
+  "ProjectInfo": {
+    "AssemblyName": "NsDemo",
+    "TargetFramework": "v4.8",
+    "RootNamespace": "NsDemo",
+    "References": [
+      "ANeuarSys",
+      "libzkfpcsharp",
+      "log4net",
+      "NCard",
+      "NCommon",
+      "NCommunicationTool",
+      "NConfigFrm",
+      "NDataBase",
+      "Newtonsoft.Json",
+      "NInterface",
+      "NLicense",
+      "NLog",
+      "NLogin",
+      "NMotionCtrl",
+      "NProc",
+      "NRTLog",
+      "NSerialPort",
+      "NSocket",
+      "NStructConfig",
+      "NUser",
+      "NVarConfig",
+      "NWarnConfig",
+      "PresentationCore",
+      "PresentationFramework",
+      "ReachFramework",
+      "System",
+      "System.Core",
+      "System.Design",
+      "System.DirectoryServices",
+      "System.Net.Http",
+      "System.Windows.Forms.DataVisualization",
+      "System.Xaml",
+      "System.Xml.Linq",
+      "System.Data.DataSetExtensions",
+      "Microsoft.CSharp",
+      "System.Data",
+      "System.Deployment",
+      "System.Drawing",
+      "System.Windows.Forms",
+      "System.Xml",
+      "UIAutomationProvider",
+      "WindowsBase",
+      "WindowsFormsIntegration"
+    ],
+    "CompileFiles": [
+      "CoreWork.cs",
+      "IdDevice/IIdDevice.cs",
+      "IdDevice/NFCReader.cs",
+      "IdDevice/Translation_Message.cs",
+      "IdDevice/UI_FingerPrint.cs",
+      "IdDevice/UI_FingerPrint.Designer.cs",
+      "IdDevice/ZKFinger.cs",
+      "MachineDebug/DebugUI_UPH.cs",
+      "MachineDebug/DebugUI_UPH.Designer.cs",
+      "MesSys/BaseInfo.cs",
+      "MesSys/bc_window_assy_mesinfo.cs",
+      "MesSys/CommStruct.cs",
+      "MesSys/CSVInfo.cs",
+      "MesSys/mesh_lot.cs",
+      "MesSys/MES_Fun.cs",
+      "PCode/procuctCode.cs",
+      "NS/AlamerView.cs",
+      "NS/AlamerView.Designer.cs",
+      "NS/CSV.cs",
+      "NS/DataTossing.cs",
+      "NS/DataTossing.Designer.cs",
+      "NS/DataUph.cs",
+      "NS/DataUph.Designer.cs",
+      "NS/DataView.cs",
+      "NS/DataView.Designer.cs",
+      "NS/FormStart.cs",
+      "NS/FormStart.designer.cs",
+      "NS/LogView.cs",
+      "NS/LogView.Designer.cs",
+      "OpDlg.cs",
+      "OpDlg.Designer.cs",
+      "FormMain.cs",
+      "FormMain.Designer.cs",
+      "NS/MLogin.cs",
+      "NS/MLogin.Designer.cs",
+      "Product/Products.cs",
+      "Program.cs",
+      "Properties/AssemblyInfo.cs",
+      "DebugApp.cs",
+      "DebugApp.Designer.cs",
+      "Properties/Resources.Designer.cs",
+      "RFIDSys/RFIDForm.cs",
+      "RFIDSys/RFIDForm.Designer.cs",
+      "RFIDSys/RFTool.cs",
+      "RFIDSys/Tool.cs",
+      "RFIDSys/US_RFID.cs",
+      "RFIDSys/US_RFID.Designer.cs",
+      "Utility/AnalyzeJson.cs",
+      "Utility/GlobalEvent.cs",
+      "Utility/LogHelper.cs",
+      "Utility/LogWriter.cs",
+      "Utility/MesTestJson.cs",
+      "Virtual IO/UI_VirtualIO.cs",
+      "Virtual IO/UI_VirtualIO.Designer.cs",
+      "Virtual IO/Virtual_IO_TCP.cs",
+      "Properties/Settings.Designer.cs"
+    ]
+  },
+  "Modules": [
+    {
+      "Name": "Action_CoreWork",
+      "Path": "NsDemo/Action_CoreWork",
+      "Files": [],
+      "Description": "流程动作处理器集合，对应旧平台路由分发后的具体业务逻辑"
+    },
+    {
+      "Name": "Comm_Ctrl",
+      "Path": "NsDemo/Comm_Ctrl",
+      "Files": [],
+      "Description": "通讯与控制结构定义，包含报警/寄存器/夹具/抛料等数据结构"
+    },
+    {
+      "Name": "SYS",
+      "Path": "NsDemo/SYS",
+      "Files": [],
+      "Description": "子系统集合，包含报警/Hive/MES/PDCA/PLC调试/Excel/Log 等模块"
+    },
+    {
+      "Name": "NS",
+      "Path": "NsDemo/NS",
+      "Files": [
+        "NsDemo/NS/AlamerView.cs",
+        "NsDemo/NS/AlamerView.Designer.cs",
+        "NsDemo/NS/CSV.cs",
+        "NsDemo/NS/DataTossing.cs",
+        "NsDemo/NS/DataTossing.Designer.cs",
+        "NsDemo/NS/DataUph.cs",
+        "NsDemo/NS/DataUph.Designer.cs",
+        "NsDemo/NS/DataView.cs",
+        "NsDemo/NS/DataView.Designer.cs",
+        "NsDemo/NS/FormStart.cs",
+        "NsDemo/NS/FormStart.Designer.cs",
+        "NsDemo/NS/LogView.cs",
+        "NsDemo/NS/LogView.Designer.cs",
+        "NsDemo/NS/MLogin.cs",
+        "NsDemo/NS/MLogin.Designer.cs"
+      ],
+      "Description": "主界面相关窗体与导航页面"
+    },
+    {
+      "Name": "OpPage",
+      "Path": "NsDemo/OpPage",
+      "Files": [],
+      "Description": "操作页面：曲线/日志/视频/主页面"
+    },
+    {
+      "Name": "MyDB",
+      "Path": "NsDemo/MyDB",
+      "Files": [],
+      "Description": "数据库访问层，包含 MySQL 与 SqlSugar 数据访问"
+    },
+    {
+      "Name": "Funs",
+      "Path": "NsDemo/Funs",
+      "Files": [],
+      "Description": "系统工具函数集合"
+    },
+    {
+      "Name": "IdDevice",
+      "Path": "NsDemo/IdDevice",
+      "Files": [
+        "NsDemo/IdDevice/IIdDevice.cs",
+        "NsDemo/IdDevice/NFCReader.cs",
+        "NsDemo/IdDevice/Translation_Message.cs",
+        "NsDemo/IdDevice/UI_FingerPrint.cs",
+        "NsDemo/IdDevice/UI_FingerPrint.Designer.cs",
+        "NsDemo/IdDevice/ZKFinger.cs"
+      ],
+      "Description": "身份识别设备：NFC/指纹仪"
+    }
+  ],
+  "Variables": [
+    {
+      "Name": "抛NG标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 12
+    },
+    {
+      "Name": "MES启用标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs",
+        "NsDemo/Product/Products.cs"
+      ],
+      "ReferenceCount": 8
+    },
+    {
+      "Name": "模式选择Flg",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs",
+        "NsDemo/Product/Products.cs"
+      ],
+      "ReferenceCount": 6
+    },
+    {
+      "Name": "产出",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/OpDlg.cs",
+        "NsDemo/Product/Products.cs"
+      ],
+      "ReferenceCount": 5
+    },
+    {
+      "Name": "产量数据",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/NS/DataUph.cs"
+      ],
+      "ReferenceCount": 5
+    },
+    {
+      "Name": "出烤炉时间",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 5
+    },
+    {
+      "Name": "次品",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/OpDlg.cs",
+        "NsDemo/Product/Products.cs"
+      ],
+      "ReferenceCount": 5
+    },
+    {
+      "Name": "烤炉用时",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 5
+    },
+    {
+      "Name": "取料次数",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/Product/Products.cs"
+      ],
+      "ReferenceCount": 5
+    },
+    {
+      "Name": "投入",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/OpDlg.cs",
+        "NsDemo/Product/Products.cs"
+      ],
+      "ReferenceCount": 5
+    },
+    {
+      "Name": "MES上传结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 5
+    },
+    {
+      "Name": "点胶完成时间",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 4
+    },
+    {
+      "Name": "工站ID",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 4
+    },
+    {
+      "Name": "缓冲台可用穴序号",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 4
+    },
+    {
+      "Name": "进烤炉时间",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 4
+    },
+    {
+      "Name": "上站RFID写入动作标记",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 4
+    },
+    {
+      "Name": "MES_password",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 4
+    },
+    {
+      "Name": "MES_username",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 4
+    },
+    {
+      "Name": "MES查询结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 4
+    },
+    {
+      "Name": "点胶工站抛NG启用标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/Product/Products.cs"
+      ],
+      "ReferenceCount": 3
+    },
+    {
+      "Name": "料盘分区",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 3
+    },
+    {
+      "Name": "收料时间",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 3
+    },
+    {
+      "Name": "跳过扫码",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 3
+    },
+    {
+      "Name": "MES自动填充",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 3
+    },
+    {
+      "Name": "PDCAurl",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 3
+    },
+    {
+      "Name": "保压时间管控启用",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "不换盘启用标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "烤炉时长上限设定",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "烤炉时长设定",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "空取空放标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "启用6轴Rbt标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "启用围栏门禁信号标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "扫码时间",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "设备软件版本",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "设备软件名",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "吸头1SNTemp",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "吸头2SNTemp",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "系统状态",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "线体ID",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "虚拟IO启用标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "穴位1-BC码",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "穴位2-BC码",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "穴位3-BC码",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "穴位4-BC码",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "载具码",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs",
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "暂停变量",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "自动/手动",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "MES上传完成标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "RFID启用标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs",
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 2
+    },
+    {
+      "Name": "保压烤炉时间设定",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "补传强制OK",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "补传自动生成",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/DebugApp.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "初始化UI流程",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "待写入出烤炉时间",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "当前复检索引",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/MesSys/CommStruct.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "登录模式",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "登录用户名称",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "点胶保压时间设定",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "点胶工站穴位结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "防尘网URL",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "忽略烤炉时间",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "获取的工装数据",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "空料仓暂停标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "满料仓可出料标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "屏蔽出烤炉时间",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/OpDlg.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "启用不取料",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "启用满盖板报警",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "扫码成功Z轴坐标",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "扫码检查点",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "上站RFID写入动作标记判断点",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "上站RFID写入动作标记判断点启用标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "钛大壳防呆启用标记",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "退出流程",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "穴位-结果Temp1",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "穴位-结果Temp2",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "穴位1-结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "穴位2-结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "穴位3-结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "穴位4-结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "压盖板时间",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "MES1穴结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "MES2穴结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "MES3穴结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "MES4穴结果",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "NG重投模式",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/FormMain.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "RF超时次数",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/RFIDSys/RFTool.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "RF读取成功标志",
+      "Type": "string",
+      "InitialValue": "",
+      "Note": "",
+      "Category": "代码引用",
+      "SourceFiles": [
+        "NsDemo/CoreWork.cs"
+      ],
+      "ReferenceCount": 1
+    },
+    {
+      "Name": "复位状态",
+      "Type": "double",
+      "InitialValue": "0",
+      "Note": "Automation 平台保护变量，禁止删除或改名",
+      "Category": "系统",
+      "SourceFiles": [],
+      "ReferenceCount": 0
+    }
+  ],
+  "DataStructs": [],
+  "IoConfig": {
+    "ControlCards": [],
+    "IoPoints": [],
+    "Notes": [
+      "旧平台控制卡与 IO 配置存储在 Application.StartupPath/Config 下的 CSV/JSON 文件，源码仓库不包含运行时配置；迁移时需从现场机拷贝 card.json/IOMap.json 等文件，或按 Action 处理器中的 IO 引用重建"
+    ]
+  },
+  "Processes": [],
+  "Alarms": [],
+  "Communications": {
+    "TcpSockets": [],
+    "SerialPorts": [],
+    "PlcConnections": [],
+    "Notes": [
+      "旧平台通讯配置存储在运行时 CSV/JSON 文件中，源码层面只能提取通讯对象名称引用；迁移时需从现场机拷贝 SocketInfo.json/SerialPortInfo.json/PlcConfig.json 等配置文件"
+    ]
+  },
+  "CodeExtracts": {
+    "CodeDirectory": "code",
+    "MainRouting": {
+      "Title": "CoreWork.PtProcess 主路由分发",
+      "File": "NsDemo/CoreWork.cs",
+      "Method": "PtProcess",
+      "Lines": "",
+      "Code": ""
+    },
+    "ProcessHandlers": [],
+    "DataStructDefinitions": []
+  },
+  "CodeFiles": [
+    {
+      "RelativePath": "NsDemo\\CoreWork.cs",
+      "CopiedPath": "NsDemo\\CoreWork.cs",
+      "SizeBytes": 131362,
+      "LineCount": 2861,
+      "Category": "Routing",
+      "Description": "主流程路由入口（PtProcess 派发）"
+    },
+    {
+      "RelativePath": "NsDemo\\FormMain.cs",
+      "CopiedPath": "NsDemo\\FormMain.cs",
+      "SizeBytes": 21526,
+      "LineCount": 711,
+      "Category": "MainEntry",
+      "Description": "程序主入口与窗体"
+    },
+    {
+      "RelativePath": "NsDemo\\Program.cs",
+      "CopiedPath": "NsDemo\\Program.cs",
+      "SizeBytes": 1853,
+      "LineCount": 55,
+      "Category": "MainEntry",
+      "Description": "程序主入口与窗体"
+    },
+    {
+      "RelativePath": "NsDemo\\Utility\\AnalyzeJson.cs",
+      "CopiedPath": "NsDemo\\Utility\\AnalyzeJson.cs",
+      "SizeBytes": 3068,
+      "LineCount": 120,
+      "Category": "Utility",
+      "Description": "工具：AnalyzeJson"
+    },
+    {
+      "RelativePath": "NsDemo\\Utility\\GlobalEvent.cs",
+      "CopiedPath": "NsDemo\\Utility\\GlobalEvent.cs",
+      "SizeBytes": 1791,
+      "LineCount": 61,
+      "Category": "Utility",
+      "Description": "工具：GlobalEvent"
+    },
+    {
+      "RelativePath": "NsDemo\\Utility\\LogHelper.cs",
+      "CopiedPath": "NsDemo\\Utility\\LogHelper.cs",
+      "SizeBytes": 1704,
+      "LineCount": 75,
+      "Category": "Utility",
+      "Description": "工具：LogHelper"
+    },
+    {
+      "RelativePath": "NsDemo\\Utility\\LogWriter.cs",
+      "CopiedPath": "NsDemo\\Utility\\LogWriter.cs",
+      "SizeBytes": 9978,
+      "LineCount": 310,
+      "Category": "Utility",
+      "Description": "工具：LogWriter"
+    },
+    {
+      "RelativePath": "NsDemo\\Utility\\MesTestJson.cs",
+      "CopiedPath": "NsDemo\\Utility\\MesTestJson.cs",
+      "SizeBytes": 2340,
+      "LineCount": 102,
+      "Category": "Utility",
+      "Description": "工具：MesTestJson"
+    }
+  ],
+  "AiAssistantGuide": {
+    "VariableChanges": [
+      {
+        "Name": "抛NG标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用12次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES启用标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用8次",
+        "Policy": "create"
+      },
+      {
+        "Name": "模式选择Flg",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用6次",
+        "Policy": "create"
+      },
+      {
+        "Name": "产出",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用5次",
+        "Policy": "create"
+      },
+      {
+        "Name": "产量数据",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用5次",
+        "Policy": "create"
+      },
+      {
+        "Name": "出烤炉时间",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用5次",
+        "Policy": "create"
+      },
+      {
+        "Name": "次品",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用5次",
+        "Policy": "create"
+      },
+      {
+        "Name": "烤炉用时",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用5次",
+        "Policy": "create"
+      },
+      {
+        "Name": "取料次数",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用5次",
+        "Policy": "create"
+      },
+      {
+        "Name": "投入",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用5次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES上传结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用5次",
+        "Policy": "create"
+      },
+      {
+        "Name": "点胶完成时间",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用4次",
+        "Policy": "create"
+      },
+      {
+        "Name": "工站ID",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用4次",
+        "Policy": "create"
+      },
+      {
+        "Name": "缓冲台可用穴序号",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用4次",
+        "Policy": "create"
+      },
+      {
+        "Name": "进烤炉时间",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用4次",
+        "Policy": "create"
+      },
+      {
+        "Name": "上站RFID写入动作标记",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用4次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES_password",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用4次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES_username",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用4次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES查询结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用4次",
+        "Policy": "create"
+      },
+      {
+        "Name": "点胶工站抛NG启用标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用3次",
+        "Policy": "create"
+      },
+      {
+        "Name": "料盘分区",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用3次",
+        "Policy": "create"
+      },
+      {
+        "Name": "收料时间",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用3次",
+        "Policy": "create"
+      },
+      {
+        "Name": "跳过扫码",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用3次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES自动填充",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用3次",
+        "Policy": "create"
+      },
+      {
+        "Name": "PDCAurl",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用3次",
+        "Policy": "create"
+      },
+      {
+        "Name": "保压时间管控启用",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "不换盘启用标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "烤炉时长上限设定",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "烤炉时长设定",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "空取空放标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "启用6轴Rbt标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "启用围栏门禁信号标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "扫码时间",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "设备软件版本",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "设备软件名",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "吸头1SNTemp",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "吸头2SNTemp",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "系统状态",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "线体ID",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "虚拟IO启用标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位1-BC码",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位2-BC码",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位3-BC码",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位4-BC码",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "载具码",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "暂停变量",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "自动/手动",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES上传完成标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "RFID启用标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用2次",
+        "Policy": "create"
+      },
+      {
+        "Name": "保压烤炉时间设定",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "补传强制OK",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "补传自动生成",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "初始化UI流程",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "待写入出烤炉时间",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "当前复检索引",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "登录模式",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "登录用户名称",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "点胶保压时间设定",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "点胶工站穴位结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "防尘网URL",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "忽略烤炉时间",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "获取的工装数据",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "空料仓暂停标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "满料仓可出料标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "屏蔽出烤炉时间",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "启用不取料",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "启用满盖板报警",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "扫码成功Z轴坐标",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "扫码检查点",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "上站RFID写入动作标记判断点",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "上站RFID写入动作标记判断点启用标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "钛大壳防呆启用标记",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "退出流程",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位-结果Temp1",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位-结果Temp2",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位1-结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位2-结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位3-结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "穴位4-结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "压盖板时间",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES1穴结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES2穴结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES3穴结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "MES4穴结果",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "NG重投模式",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "RF超时次数",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "RF读取成功标志",
+        "Type": "string",
+        "InitialValue": "",
+        "Note": "旧平台变量，引用1次",
+        "Policy": "create"
+      },
+      {
+        "Name": "复位状态",
+        "Type": "double",
+        "InitialValue": "0",
+        "Note": "Automation 平台保护变量，禁止删除或改名",
+        "Policy": "require"
+      }
+    ],
+    "Processes": [],
+    "DataStructs": [],
+    "MigrationNotes": [
+      "1. 旧平台使用 NProc.dll 作为流程引擎，路由以字符串匹配分发；新平台使用 Proc->Step->OperationType 结构化流程，每个路由关键字对应一个独立流程",
+      "2. 旧平台寄存器对应新平台变量表：GetDValue/SetDValue -> double 变量；GetCValue/SetCValue -> string 变量",
+      "3. 旧平台报警项存储在 CSV 文件中，包含 PLC 地址/位/中英文注释；新平台对齐 AlarmInfoStore，迁移时需把 CSV 表格转为 JSON 配置",
+      "4. 旧平台控制卡/轴/IO 配置存储在运行时 CSV/JSON 文件中，源码仓库不含；迁移时需从现场机拷贝 card.json/IOMap.json 等配置文件",
+      "5. 旧平台 PLC 通讯使用 NPlcMap 库，TCP/串口使用 NCommunicationTool；新平台使用内置 CommunicationHub 与 PlcConfigStore",
+      "6. 旧平台 Action 处理器为单例类 + 字符串路由方式实现业务逻辑；新平台建议复刻为流程的 OperationType 指令序列，或使用 自定义方法 指令封装",
+      "7. 旧平台使用 log4net/NLog 双日志；新平台统一使用 LocalFileLogger，日志落 D:\\AutomationLogs\\",
+      "8. 旧平台 MySQL 数据库存储产品数据；新平台暂无内置数据库，相关逻辑需用 自定义方法 实现",
+      "9. 旧平台多语言资源在 Language/*.resx；新平台暂未内置多语言，可后续扩展",
+      "10. 旧平台 Hive/MES/PDCA/Video 等子系统为业务定制；新平台不内置，需要按需复刻或封装为自定义方法",
+      "11. Automation 平台变量表固定 0..999 容量，强制保留 复位状态 与 系统状态 两个 double 变量；旧平台变量数量较多时需按重要性筛选",
+      "12. Automation 平台流程指令使用语义 kind（variable.set/wait/io.write 等）或 native.operation + 原生 OperaType；旧平台字符串路由无法直接映射，建议结合子动作源码逐步复刻"
+    ]
+  }
+}
